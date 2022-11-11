@@ -21,6 +21,13 @@
       />
       <h5 class="navTitle">TEMPLATE</h5>
       <NavLink
+        header="TodoChart"
+        link="/app/todochart"
+        iconName="flaticon-list-3"
+        index="todochart"
+        isHeader
+      />
+      <NavLink
         header="Typography"
         link="/app/typography"
         iconName="flaticon-list-3"

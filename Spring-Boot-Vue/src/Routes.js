@@ -11,6 +11,7 @@ import Charts from '@/pages/Charts/Charts';
 import Dashboard from '@/pages/Visits/Visits';
 import Login from '@/pages/Login/Login';
 import ErrorPage from '@/pages/Error/Error';
+import TodoChart from '@/pages/TodoChart/TodoChart';
 
 Vue.use(Router);
 
@@ -66,6 +67,11 @@ export default new Router({
           path: 'components/charts',
           name: 'Charts',
           component: Charts,
+        },
+        {
+          path: 'todochart',
+          name: 'TodoChart',
+          component: TodoChart,
         },
       ],
     },

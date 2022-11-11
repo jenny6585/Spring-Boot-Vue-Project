@@ -10,7 +10,7 @@
     <b-row>
       <b-col xs="12" lg="6">
         <Widget
-          title="<h5>Headings <small class='text-muted'>Default and customized</small></h5>"
+          title="<h5>Things Todo<small class='text-muted'>Default and customized</small></h5>"
           customHeader close collapse
         >
           <h4>Default headings</h4>
