@@ -4,7 +4,7 @@
 
 We have implemented some basic pages, so you can see our template in action.
 
-- sample
+- sample todo made!
 
 ## Instal1ation
 
