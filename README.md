@@ -6,7 +6,7 @@ We have implemented some basic pages, so you can see our template in action.
 
 - sample
 
-## Instal1ation
+## Installation
 
 1. Download Vue Bootstrap Template
 
