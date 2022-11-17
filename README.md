@@ -54,7 +54,11 @@ yarn serve
 ```
 
 10. What we used
-our schema name is 'finalpj'
+our schema name 
+
+```
+finalpj
+```
 
 ## Project Description
 
