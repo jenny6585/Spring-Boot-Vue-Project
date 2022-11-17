@@ -53,6 +53,13 @@ yarn
 yarn serve
 ```
 
+10. What we used
+our schema name 
+
+```
+finalpj
+```
+
 ## Project Description
 
 [project description link](https://github.com/jenny6585/Spring-Boot-Vue-Project/blob/main/%EA%B8%B0%ED%9A%8D%EC%95%88.md)
