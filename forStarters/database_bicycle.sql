@@ -71,7 +71,7 @@ CREATE TABLE `board` (
 
 LOCK TABLES `board` WRITE;
 /*!40000 ALTER TABLE `board` DISABLE KEYS */;
-INSERT INTO `board` VALUES (1,1,'ssafy','Vue Axios 연동','Vue를 이용한 HTTP 통신',1,'2022-11-10 11:14:34'),(2,2,'ssafy','Vue를 배워봅시다','Vue와 Spring을 연동하자~',0,'2022-11-10 11:14:34'),(3,3,'admin','뷰와 스프링부트를 이용한 실전 프로젝트','프로젝트를 직접만드는 내용.',0,'2022-11-10 11:14:34'),(4,4,'ssafy','프론트엔드 프레임워크','Vue는 프론트엔드의 인기있는 프레임워크 입니다.',3,'2022-11-10 11:14:34');
+INSERT INTO `board` VALUES (1,1,'ssafy','Vue Axios 연동','Vue를 이용한 HTTP 통신',1,'2022-11-10 11:14:34',null),(2,2,'ssafy','Vue를 배워봅시다','Vue와 Spring을 연동하자~',0,'2022-11-10 11:14:34',null),(3,3,'admin','뷰와 스프링부트를 이용한 실전 프로젝트','프로젝트를 직접만드는 내용.',0,'2022-11-10 11:14:34',null),(4,4,'ssafy','프론트엔드 프레임워크','Vue는 프론트엔드의 인기있는 프레임워크 입니다.',3,'2022-11-10 11:14:34',null);
 /*!40000 ALTER TABLE `board` ENABLE KEYS */;
 UNLOCK TABLES;
 
