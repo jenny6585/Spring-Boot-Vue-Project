@@ -4,6 +4,8 @@
 -- ------------------------------------------------------
 -- Server version	8.0.29
 
+use finalpj;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -51,11 +53,13 @@ DROP TABLE IF EXISTS `board`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `board` (
   `articleno` int NOT NULL AUTO_INCREMENT,
+  `originNo` int default NULL,
   `id` varchar(45) DEFAULT NULL,
   `subject` text,
   `content` text,
   `hit` int DEFAULT NULL,
   `regtime` text,
+  `fileName` text,
   PRIMARY KEY (`articleno`),
   KEY `fk_board_member1_idx` (`id`),
   CONSTRAINT `fk_board_member1` FOREIGN KEY (`id`) REFERENCES `member` (`id`)
@@ -68,7 +72,7 @@ CREATE TABLE `board` (
 
 LOCK TABLES `board` WRITE;
 /*!40000 ALTER TABLE `board` DISABLE KEYS */;
-INSERT INTO `board` VALUES (1,'ssafy','Vue Axios 연동','Vue를 이용한 HTTP 통신',1,'2022-11-10 11:14:34'),(2,'ssafy','Vue를 배워봅시다','Vue와 Spring을 연동하자~',0,'2022-11-10 11:14:34'),(3,'admin','뷰와 스프링부트를 이용한 실전 프로젝트','프로젝트를 직접만드는 내용.',0,'2022-11-10 11:14:34'),(4,'ssafy','프론트엔드 프레임워크','Vue는 프론트엔드의 인기있는 프레임워크 입니다.',3,'2022-11-10 11:14:34');
+INSERT INTO `board` VALUES (1,1,'ssafy','Vue Axios 연동','Vue를 이용한 HTTP 통신',1,'2022-11-10 11:14:34'),(2,2,'ssafy','Vue를 배워봅시다','Vue와 Spring을 연동하자~',0,'2022-11-10 11:14:34'),(3,3,'admin','뷰와 스프링부트를 이용한 실전 프로젝트','프로젝트를 직접만드는 내용.',0,'2022-11-10 11:14:34'),(4,4,'ssafy','프론트엔드 프레임워크','Vue는 프론트엔드의 인기있는 프레임워크 입니다.',3,'2022-11-10 11:14:34');
 /*!40000 ALTER TABLE `board` ENABLE KEYS */;
 UNLOCK TABLES;
 
