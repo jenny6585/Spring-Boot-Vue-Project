@@ -1,11 +1,10 @@
 .auth-page {
-  padding-top: 10vh;
+  padding-top: 25vh;
   height: 100vh;
 }
 
 .widget-auth {
   max-width: 385px;
-
   h1,
   h2,
   h3,
@@ -41,6 +40,7 @@
     flex-direction: column;
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
     padding: 0 $widget-padding-horizontal;
+
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
@@ -80,6 +80,11 @@
       margin: 0 auto;
       font-size: $font-size-sm;
     }
+    .social-text-black {
+      margin: 0 auto;
+      font-size: $font-size-sm;
+      color: black;
+    }
 
     .social-google {
       background-size: 100%;
@@ -92,6 +97,20 @@
       background-position-x: 50%;
       background-position-y: 50%;
       background-image: url('../assets/microsoft.png');
+    }
+    .social-kakao {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-image: url('../assets/kakao.png');
+    }
+    .social-naver {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-image: url('../assets/naver.png');
     }
 
   }

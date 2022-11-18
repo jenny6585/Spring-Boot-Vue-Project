@@ -399,7 +399,7 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 
 .input-transparent {
   color: $text-color;
-  background: $widget-bg;
+  background: #34385d;
   border-color: transparentize($widget-bg, 0.15);
 
   &:focus {

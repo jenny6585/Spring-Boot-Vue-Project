@@ -58,6 +58,8 @@ body:after {
     url(../../src/assets/icons/grid-seven.svg)
     url(../../src/assets/icons/grid-third.svg)
     url(../../src/assets/icons/grid-white.svg)
+    url(../../src/assets/icons/heart.svg)
+    url(../../src/assets/icons/heart-white.svg)
     url(../../src/assets/icons/home.svg)
     url(../../src/assets/icons/home-blue.svg)
     url(../../src/assets/icons/home-grey.svg)
@@ -146,6 +148,13 @@ i.fi {
 
   .flaticon-close {
     background-image: url('../../src/assets/icons/close.svg');
+  }
+
+  .flaticon-heart {
+    background-image: url('../../src/assets/icons/heart.svg');
+  }
+  .flaticon-heart-white {
+    background-image: url('../../src/assets/icons/heart-white.svg');
   }
 
   .router-link-active .flaticon-equal-3 {

@@ -1,34 +1,34 @@
 <template>
   <div class="auth-page">
     <b-container>
-      <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Login to your Web App</h3>" customHeader>
+      <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Login to Continue</h3>" customHeader>
         <p class="widget-auth-info">
-          Use your email to sign in.
+          Welcome to our page
         </p>
         <form class="mt" @submit.prevent="login">
           <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">
             {{errorMessage}}
           </b-alert>
-          <b-form-group label="Email" label-for="email">
+          <b-form-group label="ID" label-for="id">
             <b-input-group>
               <b-input-group-text slot="prepend"><i class="la la-user text-white"></i></b-input-group-text>
-              <input id="email"
-                     ref="email"
-                     class="form-control input-transparent pl-3"
-                     type="email"
-                     required
-                     placeholder="Email"/>
+              <input id="id"
+                      ref="id"
+                      class="form-control input-transparent pl-3"
+                      type="id"
+                      required
+                      placeholder="ID"/>
             </b-input-group>
           </b-form-group>
           <b-form-group label="Password" label-for="password">
             <b-input-group>
               <b-input-group-text slot="prepend"><i class="la la-lock text-white"></i></b-input-group-text>
               <input id="password"
-                     ref="password"
-                     class="form-control input-transparent pl-3"
-                     type="password"
-                     required
-                     placeholder="Password"/>
+                      ref="password"
+                      class="form-control input-transparent pl-3"
+                      type="password"
+                      required
+                      placeholder="Password"/>
             </b-input-group>
           </b-form-group>
           <div class="bg-widget auth-widget-footer">
@@ -43,13 +43,17 @@
             </p>
             <router-link class="d-block text-center mb-4" to="login">Create an Account</router-link>
             <div class="social-buttons">
+              <b-button variant="success" class="social-button">
+                <i class="social-icon social-naver"></i>
+                <p class="social-text">NAVER</p>
+              </b-button>
+              <b-button variant="warning" class="social-button">
+                <i class="social-icon social-kakao"></i>
+                <p class="social-text">KAKAO</p>
+              </b-button>
               <b-button variant="primary" class="social-button">
                 <i class="social-icon social-google"></i>
                 <p class="social-text">GOOGLE</p>
-              </b-button>
-              <b-button variant="success" class="social-button">
-                <i class="social-icon social-microsoft"></i>
-                <p class="social-text">MICROSOFT</p>
               </b-button>
             </div>
           </div>
@@ -80,13 +84,13 @@ export default {
 
       if (email.length !== 0 && password.length !== 0) {
         window.localStorage.setItem('authenticated', true);
-        this.$router.push('/app/dashboard');
+        this.$router.push('/app/bikemap');
       }
     },
   },
   created() {
     if (window.localStorage.getItem('authenticated') === 'true') {
-      this.$router.push('/app/dashboard');
+      this.$router.push('/app/bikemap');
     }
   },
 };

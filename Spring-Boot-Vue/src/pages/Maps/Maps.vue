@@ -14,7 +14,7 @@
                 customHeader close collapse
         >
           <GmapMap
-                  :center="{lat: -37.813179, lng: 144.950259}"
+                  :center="{lat: 37.5111835, lng: 127.0595914}"
                   :zoom="12"
                   style="width: 100%; height: 60vh"
                   :options="options"

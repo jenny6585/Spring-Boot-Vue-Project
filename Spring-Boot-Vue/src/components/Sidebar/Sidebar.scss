@@ -15,7 +15,7 @@
 .logo {
   margin: 15px 0;
   font-size: 18px;
-  width: 100%;
+  width: 70%;
   font-weight: $font-weight-normal;
   text-transform: uppercase;
   text-align: center;
@@ -52,7 +52,8 @@
   margin: 35px 0 5px 11px;
   font-weight: $font-weight-bold;
   font-size: $font-size-mini;
-  color: #474E80;
+  //color: #474E80;
+  color: white;
   transition: opacity $sidebar-transition-time ease-in-out;
 
   @media (min-width: breakpoint-min(lg)) {

@@ -4,34 +4,25 @@
     :class="{sidebar: true}"
   >
     <header class="logo">
-      <router-link to="/app">Light <span class="fw-bold">Blue</span></router-link>
+      <router-link to="/app"><span class="fw-bold">서울 탐방</span></router-link>
     </header>
 
-    <a class="generator-link navTitle" target="_blank" href="https://flatlogic.com/generator">Generate App</a>
-
     <ul class="nav">
-      <h5 class="navTitle">APP</h5>
+      <h5 class="navTitle">BIKE MAP</h5>
       <NavLink
         :activeItem="activeItem"
-        header="Dashboard"
-        link="/app/dashboard"
+        header="BikeMap"
+        link="/app/bikemap"
         iconName="flaticon-home-3"
-        index="dashboard"
+        index="bikemap"
         isHeader
       />
-      <h5 class="navTitle">TEMPLATE</h5>
+      <h5 class="navTitle">BOARD</h5>
       <NavLink
-        header="TodoChart"
-        link="/app/todochart"
-        iconName="flaticon-list-3"
-        index="todochart"
-        isHeader
-      />
-      <NavLink
-        header="Typography"
-        link="/app/typography"
-        iconName="flaticon-list-3"
-        index="typography"
+        header="Bookmark"
+        link="/app/Bookmark"
+        iconName="flaticon-pin-1"
+        index="bookmark"
         isHeader
       />
       <NavLink
@@ -61,46 +52,6 @@
         ]"
       />
     </ul>
-    <h5 class="navTitle d-sm-down-none">
-      LABELS
-    </h5>
-    <ul class="sidebarLabels d-sm-down-none">
-      <li>
-        <a href="#">
-          <i class="fa fa-circle text-success mr-3" />
-          <span class="labelName">Core</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-circle text-primary mr-3" />
-          <span class="labelName">UI Elements</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-circle text-danger mr-3" />
-          <span class="labelName">Forms</span>
-        </a>
-      </li>
-    </ul>
-
-    <h5 class="navTitle d-sm-down-none mb-3">
-      PROJECTS
-    </h5>
-    <div class="sidebarAlerts d-sm-down-none">
-      <b-alert
-        v-for="alert in alerts"
-        :key="alert.id"
-        class="sidebarAlert" variant="transparent"
-        show dismissible
-      >
-        <span>{{alert.title}}</span><br />
-        <b-progress class="sidebarProgress progress-xs mt-1"
-          :variant="alert.color" :value="alert.value" :max="100" />
-        <span>{{alert.footer}}</span>
-      </b-alert>
-    </div>
   </nav>
   </b-collapse>
 </template>

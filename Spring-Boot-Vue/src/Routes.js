@@ -2,16 +2,15 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Layout from '@/components/Layout/Layout';
-import Typography from '@/pages/Typography/Typography';
+import Bookmark from '@/pages/Bookmark/Bookmark';
 import Tables from '@/pages/Tables/Tables';
 import Notifications from '@/pages/Notifications/Notifications';
 import Icons from '@/pages/Icons/Icons';
 import Maps from '@/pages/Maps/Maps';
 import Charts from '@/pages/Charts/Charts';
-import Dashboard from '@/pages/Visits/Visits';
+import BikeMap from '@/pages/Visits/BikeMap';
 import Login from '@/pages/Login/Login';
 import ErrorPage from '@/pages/Error/Error';
-import TodoChart from '@/pages/TodoChart/TodoChart';
 
 Vue.use(Router);
 
@@ -34,18 +33,18 @@ export default new Router({
       component: Layout,
       children: [
         {
-          path: 'dashboard',
-          name: 'Dashboard',
-          component: Dashboard,
+          path: 'bikemap',
+          name: 'BikeMap',
+          component: BikeMap,
         },
         {
-          path: 'typography',
-          name: 'Typography',
-          component: Typography,
+          path: 'bookmark',
+          name: 'Bookmark',
+          component: Bookmark,
         },
         {
           path: 'tables',
-          name: 'Typography',
+          name: 'Tables',
           component: Tables,
         },
         {
@@ -67,11 +66,6 @@ export default new Router({
           path: 'components/charts',
           name: 'Charts',
           component: Charts,
-        },
-        {
-          path: 'todochart',
-          name: 'TodoChart',
-          component: TodoChart,
         },
       ],
     },
