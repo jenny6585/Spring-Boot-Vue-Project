@@ -3,7 +3,6 @@
 -- Host: 127.0.0.1    Database: finalpj
 -- ------------------------------------------------------
 -- Server version	8.0.29
-
 use finalpj;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -53,7 +52,7 @@ DROP TABLE IF EXISTS `board`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `board` (
   `articleno` int NOT NULL AUTO_INCREMENT,
-  `originNo` int default NULL,
+  `originNo` int DEFAULT NULL,
   `id` varchar(45) DEFAULT NULL,
   `subject` text,
   `content` text,
