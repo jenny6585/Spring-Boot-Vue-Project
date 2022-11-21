@@ -1,16 +1,12 @@
 <template>
   <div class="visits-page">
-    <h1 class="page-title">Lets go on a Trip &nbsp;
-      <small>
-        <small>...on a bike</small>
-      </small>
-    </h1>
+    <b-breadcrumb>
+      <b-breadcrumb-item>YOU ARE HERE</b-breadcrumb-item>
+      <b-breadcrumb-item active>bicycle map</b-breadcrumb-item>
+    </b-breadcrumb>
     <b-row>
       <b-col lg="7">
-        <Widget class="bg-transparent">
-          
-
-        </Widget>
+        <KakaoMap />
       </b-col>
     </b-row>
   </div>
@@ -18,15 +14,20 @@
 
 <script>
 import Widget from '@/components/Widget/Widget';
-import Map from './components/Map/Map';
+import KakaoMap from "@/views/Map";
 
 
 export default {
   name: 'BikeMap',
   components: {
-    Widget, Map
+    Widget, KakaoMap,
   },
 };
 </script>
 
 <style src="./Visits.scss" lang="scss" />
+#map{
+  width:1000px;
+  height:500px
+}
+</style>
