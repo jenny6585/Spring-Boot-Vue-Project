@@ -12,7 +12,7 @@ public class TodoDto {
 	@ApiModelProperty(value = "Todo내용")
 	private String content;
 	@ApiModelProperty(value = "Todo상태")
-	private boolean status;
+	private int checked;
 	public int getTodono() {
 		return todono;
 	}
@@ -22,7 +22,7 @@ public class TodoDto {
 	public String getUserid() {
 		return userid;
 	}
-	public void setUserid(String userid) {
+	public void setUserId(String userid) {
 		this.userid = userid;
 	}
 	public String getContent() {
@@ -31,16 +31,19 @@ public class TodoDto {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public boolean isStatus() {
-		return status;
+	public int getChecked() {
+		return checked;
 	}
-	public void setStatus(boolean status) {
-		this.status = status;
+	public void setChecked(int checked) {
+		this.checked = checked;
 	}
 	@Override
 	public String toString() {
-		return "TodoDto [todono=" + todono + ", userid=" + userid + ", content=" + content + ", status=" + status + "]";
+		return "TodoDto [todono=" + todono + ", userid=" + userid + ", content=" + content + ", checked=" + checked
+				+ "]";
 	}
+	
+	
 	
 	
 }

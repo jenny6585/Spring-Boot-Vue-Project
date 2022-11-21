@@ -42,6 +42,7 @@ public class TodoController {
 	public ResponseEntity<String> writeTodo(@RequestBody @ApiParam(value = "할일 정보.", required = true) TodoDto todoDto) throws Exception {
 		logger.info("writeTodo - 호출");
 		if (todoService.writeTodo(todoDto)) {
+			//System.out.println(todoDto);
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
