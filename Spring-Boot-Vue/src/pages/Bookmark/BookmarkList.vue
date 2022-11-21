@@ -5,23 +5,15 @@
         <table class="table table-bordered table-lg mt-lg mb-0">
         <thead class="text-uppercase">
             <tr>
-                <th>
-                </th>
                 <th class="text-center">Bookmark</th>
             </tr>
         </thead>
-        <tbody v-for="(todo,index) in sameUser" :key="index" :todo="todo">
-            <tr>
+        <tbody>
+            <tr v-for="(todo,index) in sameUser" :key="index">
                 <td>
-                <div class="abc-checkbox">
-                    <input type="checkbox"
-                    id="checkbox15" v-model="todo.status"
-                    />
-                    <label for="checkbox15" />
-                </div>
-                </td>
-                <td>
-                    <span :class="{ completed: todo.status }" @click="modifyTodoStatus">{{ todo.content }}</span>
+                    <b-form-checkbox size="lg" v-model="todo.checked" @click="modifyTodoStatus">
+                        <span :class="{ completed: todo.checked }" >{{ todo.content }}</span>
+                    </b-form-checkbox>
                 </td>
             </tr>
         </tbody>
@@ -69,20 +61,24 @@ export default {
         },
     },
     methods:{
+        moveList() {
+            console.log("여기");
+            this.$router.push({ name: "bookmarklist" });
+        },
         modifyTodoStatus(){
-            if(this.todo.status === 0){
-                this.todo.status = 1;
-                this.modifyArticle();
+            if(this.todo.checked === 0){
+                this.todo.checked = 1;
+                this.modifyTodo();
             }else{
-                this.todo.status = 0;
-                this.modifyArticle();
+                this.todo.checked = 0;
+                this.modifyTodo();
             }
         },
         modifyTodo() {
             let param = {
                 userid: this.todo.userid,
                 content: this.todo.content,
-                status: this.todo.status,
+                status: this.todo.checked,
             };
             modifyTodo(
                 param,
@@ -93,12 +89,13 @@ export default {
                 }
                 alert(msg);
                 // 현재 route를 /list로 변경.
-                this.moveList();
+                this.$router.go();
+                //this.moveList();
                 },
             );
         },
         removeTodo(){
-            let param = this.numlist.filter(function(item){return item.status===true;});//완료 애들 가져오기
+            let param = this.numlist.filter(function(item){return item.checked===true;});//완료 애들 가져오기
             deleteTodo(
                 param,
                 ({ data }) => {
@@ -108,7 +105,8 @@ export default {
                 }
                 alert(msg);
                 // 현재 route를 /list로 변경.
-                this.moveList();
+                this.$router.go();
+                //this.moveList();
                 },
             )
         },

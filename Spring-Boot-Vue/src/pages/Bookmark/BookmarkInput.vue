@@ -22,17 +22,18 @@ export default {
                 todono: 0,
                 userid: "",
                 content: "",
-                status: 0,
+                checked: 0,
             },
         };
     },
     computed:{
         ...mapState(memberStore, ["userInfo"]),
     },
+    created(){
+        this.todo.userid = this.userInfo.userid;
+    },
     methods: {
-        onSubmit(event) {
-            event.preventDefault();
-
+        onSubmit() {
             let err = true;
             let msg = "";
             err && !this.todo.content && ((msg = "내용 입력해주세요"), (err = false), this.$refs.content.focus());
@@ -40,20 +41,20 @@ export default {
             if (!err) alert(msg);
             else this.registTodo();
         },
-        onReset(event) {
-            event.preventDefault();
+        onReset() {
             this.todo.todono = 0;
             this.todo.content = "";
-            this.todo.status = 0;
+            this.todo.checked = 0;
+            this.todo.userid ="";
             this.moveList();
         },
         registTodo() {
             let param = {
-                userid: this.userInfo.userid,
+                userid: this.todo.userid,
                 content: this.todo.content,
-                status: 0,
+                checked: 0,
             };
-            console.log(this.todo.content);
+            console.log(param);
             writeTodo(
                 param,
                 ({ data }) => {
@@ -62,10 +63,15 @@ export default {
                     msg = "등록이 완료되었습니다.";
                 }
                 alert(msg);
-                this.moveList();
+                this.onReset();
+                this.$router.go();
+                //this.moveList();
+                
                 },
+                
             );
-            this.onReset();
+            
+            
         },
         moveList() {
             console.log("여기");
