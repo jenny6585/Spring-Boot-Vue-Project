@@ -1,15 +1,18 @@
 <template>
     <b-input-group class="input-group-transparent search-group">
         <b-input-group-text slot="prepend"><i class="fi flaticon-search-2"></i></b-input-group-text>
-        <b-input class="input-transparent" id="search-input" placeholder="Search Dashboard" v-model="todo.content" @keypress.enter="onSubmit" />
+        <b-input class="input-transparent" id="content" placeholder="Search Dashboard" v-model="todo.content" required/>
         <b-input-group-append>
-            <b-button variant="outline-success" @submit="onSubmit" @reset="onReset">등록</b-button>
+            <b-button variant="outline-success" @click="onSubmit">등록</b-button>
         </b-input-group-append>
     </b-input-group>
 </template>
 
 <script>
 import { writeTodo } from "@/api/bookmark";
+import { mapState } from "vuex";
+
+const memberStore = "memberStore";
 
 export default {
     name: "BookmarkInput",
@@ -22,6 +25,9 @@ export default {
                 status: 0,
             },
         };
+    },
+    computed:{
+        ...mapState(memberStore, ["userInfo"]),
     },
     methods: {
         onSubmit(event) {
@@ -38,15 +44,16 @@ export default {
             event.preventDefault();
             this.todo.todono = 0;
             this.todo.content = "";
-            this.todo.status = false;
+            this.todo.status = 0;
             this.moveList();
         },
         registTodo() {
             let param = {
-                userid: this.todo.userid,
+                userid: this.userInfo.userid,
                 content: this.todo.content,
-                status: this.todo.status,
+                status: 0,
             };
+            console.log(this.todo.content);
             writeTodo(
                 param,
                 ({ data }) => {
@@ -58,8 +65,10 @@ export default {
                 this.moveList();
                 },
             );
+            this.onReset();
         },
         moveList() {
+            console.log("여기");
             this.$router.push({ name: "bookmarklist" });
         },
     },

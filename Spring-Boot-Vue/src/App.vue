@@ -17,13 +17,13 @@ export default {
 
     if (window.localStorage.getItem('authenticated') === 'false') {
       if(this.isLogin==false){
-        this.$router.push('/user/login');
+        this.$router.push({ name: "login" });
       }
       
     }
 
     if (currentPath === '/' || currentPath === '/app') {
-      this.$router.push('/app/bikemap');
+      this.$router.push({ name: "BikeMap" });
     }
   },
 };
