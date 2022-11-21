@@ -1,38 +1,32 @@
 <template>
-  <div class="auth-page">
-    <b-container>
-      <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Login to Continue</h3>" customHeader>
-        <p class="widget-auth-info">
-          Welcome to our page
-        </p>
-        <form class="mt" @submit.prevent="login">
-          <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">
-            {{errorMessage}}
-          </b-alert>
+  <form class="mt" @submit.prevent="login">
           <b-form-group label="ID" label-for="id">
             <b-input-group>
               <b-input-group-text slot="prepend"><i class="la la-user text-white"></i></b-input-group-text>
-              <input id="id"
-                      ref="id"
+              <b-alert show variant="danger" v-if="isLoginError">아이디 또는 비밀번호를 확인하세요.</b-alert>
+              <input id="userid"
+                      v-model="user.userid"
                       class="form-control input-transparent pl-3"
                       type="id"
                       required
-                      placeholder="ID"/>
+                      placeholder="ID"
+                      @keyup.enter="confirm"/>
             </b-input-group>
           </b-form-group>
           <b-form-group label="Password" label-for="password">
             <b-input-group>
               <b-input-group-text slot="prepend"><i class="la la-lock text-white"></i></b-input-group-text>
-              <input id="password"
-                      ref="password"
+              <input id="userpwd"
+                      v-model="user.userpwd"
                       class="form-control input-transparent pl-3"
                       type="password"
                       required
-                      placeholder="Password"/>
+                      placeholder="Password"
+                      @keyup.enter="confirm"/>
             </b-input-group>
           </b-form-group>
           <div class="bg-widget auth-widget-footer">
-            <b-button type="submit" variant="danger" class="auth-btn" size="sm">
+            <b-button type="button" variant="danger" class="auth-btn" size="sm" @click="confirm">
               <span class="auth-btn-circle">
                 <i class="la la-caret-right"></i>
               </span>
@@ -41,7 +35,9 @@
             <p class="widget-auth-info mt-4">
               Don't have an account? Sign up now!
             </p>
-            <router-link class="d-block text-center mb-4" to="login">Create an Account</router-link>
+            <b-button type="button" variant="primary" class="auth-btn" size="sm" @click="movePage">
+              Create an Account
+            </b-button>
             <div class="social-buttons">
               <b-button variant="success" class="social-button">
                 <i class="social-icon social-naver"></i>
@@ -58,39 +54,50 @@
             </div>
           </div>
         </form>
-      </Widget>
-    </b-container>
-    <footer class="auth-footer">
-      Light Blue Vue Admin Dashboard Template - Made by <a href="https://flatlogic.com" target="_blank">Flatlogic</a>
-    </footer>
-  </div>
 </template>
 
 <script>
 import Widget from '@/components/Widget/Widget';
+import { mapState, mapActions } from "vuex";
+
+const memberStore = "memberStore";
 
 export default {
-  name: 'LoginPage',
-  components: { Widget },
+  name: 'UserLogin',
+  components: { 
+    Widget, 
+  },
   data() {
     return {
-      errorMessage: null,
+      // isLoginError: false,
+      user: {
+        userid: null,
+        userpwd: null,
+      },
     };
   },
+  computed: {
+    ...mapState(memberStore, ["isLogin", "isLoginError", "userInfo"]),
+  },
   methods: {
-    login() {
-      const email = this.$refs.email.value;
-      const password = this.$refs.password.value;
-
-      if (email.length !== 0 && password.length !== 0) {
-        window.localStorage.setItem('authenticated', true);
-        this.$router.push('/app/bikemap');
+    ...mapActions(memberStore, ["userConfirm", "getUserInfo"]),
+    async confirm() {
+      await this.userConfirm(this.user);
+      let token = sessionStorage.getItem("access-token");
+      // console.log("1. confirm() token >> " + token);
+      if (this.isLogin) {
+        await this.getUserInfo(token);
+        // console.log("4. confirm() userInfo :: ", this.userInfo);
+        this.$router.push({ name: "BikeMap" });
       }
+    },
+    movePage() {
+      this.$router.push({ name: "join" });
     },
   },
   created() {
     if (window.localStorage.getItem('authenticated') === 'true') {
-      this.$router.push('/app/bikemap');
+      this.$router.push({ name: "BikeMap" });
     }
   },
 };
