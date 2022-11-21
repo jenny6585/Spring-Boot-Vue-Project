@@ -26,12 +26,12 @@
         isHeader
       />
       <NavLink
-        header="Tables Basic"
-        link="/app/tables"
-        iconName="flaticon-equal-3"
-        index="tables"
-        isHeader
-      />
+          header="Recommand Board"
+          link="/app/board"
+          iconName="flaticon-equal-3"
+          index="board"
+          isHeader
+        />
       <NavLink
         header="Notifications"
         link="/app/notifications"

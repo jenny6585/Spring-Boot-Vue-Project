@@ -3,10 +3,9 @@ import VueRouter from 'vue-router';
 
 import Layout from '@/components/Layout/Layout';
 import Bookmark from '@/pages/Bookmark/Bookmark';
-import Tables from '@/pages/Tables/Tables';
+
 import Notifications from '@/pages/Notifications/Notifications';
 import Icons from '@/pages/Icons/Icons';
-import Maps from '@/pages/Maps/Maps';
 import Charts from '@/pages/Charts/Charts';
 import BikeMap from '@/pages/Visits/BikeMap';
 import User from '@/pages/User/User';
@@ -88,9 +87,41 @@ const routes = [
         ],
       },
       {
-        path: 'tables',
-        name: 'Tables',
-        component: Tables,
+        path: "board",
+        name: "Boards",
+        component: () => import("@/views/AppBoard"),
+        redirect: "board/list",
+  children: [
+    {
+      path: "list",
+      name: "boardlist",
+      component: () => import("@/pages/board/BoardList"),
+    },
+    {
+      path: "write",
+      name: "boardwrite",
+      beforeEnter: onlyAuthUser,
+      component: () => import("@/pages/board/BoardWrite"),
+    },
+    {
+      path: "view/:articleno",
+      name: "boardview",
+      beforeEnter: onlyAuthUser,
+      component: () => import("@/pages/board/BoardView"),
+    },
+    {
+      path: "modify",
+      name: "boardmodify",
+      beforeEnter: onlyAuthUser,
+      component: () => import("@/pages/board/BoardModify"),
+    },
+    {
+      path: "delete/:articleno",
+      name: "boarddelete",
+      beforeEnter: onlyAuthUser,
+      component: () => import("@/pages/board/BoardDelete"),
+    },
+  ],
       },
       {
         path: 'notifications',
@@ -101,11 +132,6 @@ const routes = [
         path: 'components/icons',
         name: 'Icons',
         component: Icons,
-      },
-      {
-        path: 'components/maps',
-        name: 'Maps',
-        component: Maps,
       },
       {
         path: 'components/charts',

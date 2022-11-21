@@ -83,11 +83,12 @@ export default {
     ...mapActions(memberStore, ["userConfirm", "getUserInfo"]),
     async confirm() {
       await this.userConfirm(this.user);
+
       let token = sessionStorage.getItem("access-token");
-      // console.log("1. confirm() token >> " + token);
+      console.log("1. confirm() token >> " + token);
       if (this.isLogin) {
         await this.getUserInfo(token);
-        // console.log("4. confirm() userInfo :: ", this.userInfo);
+        console.log("4. confirm() userInfo :: ", this.userInfo);
         this.$router.push({ name: "BikeMap" });
       }
     },
