@@ -21,6 +21,7 @@
     "chart.js": "^2.9.4",
     "css-loader": "^1.0.0",
     "echarts": "4.9.0",
+    "element-ui": "^2.15.12",
     "expose-loader": "^0.7.5",
     "font-awesome": "4.7.0",
     "glyphicons-halflings": "^1.9.1",

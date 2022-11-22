@@ -2,10 +2,12 @@
   <b-tr>
     <b-td>{{ articleno }}</b-td>
     <b-th class="text-left">
-      <router-link :to="{ name: 'boardview', params: { articleno: articleno } }">{{ subject }}</router-link>
+      <router-link :to="{ name: 'boardview', params: { articleno: articleno } }">{{
+        subject
+      }}</router-link>
     </b-th>
     <b-td>{{ hit }}</b-td>
-    <b-td>{{ id }}</b-td>
+    <b-td>{{ userid }}</b-td>
     <b-td>{{ regtime | dateFormat }}</b-td>
   </b-tr>
 </template>
@@ -17,14 +19,14 @@ export default {
   name: "BoardListItem",
   props: {
     articleno: Number,
-    id: String,
+    userid: String,
     subject: String,
     hit: Number,
     regtime: String,
   },
   filters: {
     dateFormat(regtime) {
-      return moment(new Date(regtime)).format("YY.MM.DD");
+      return moment(new Date(regtime)).format("YYYYMMDD");
     },
   },
 };

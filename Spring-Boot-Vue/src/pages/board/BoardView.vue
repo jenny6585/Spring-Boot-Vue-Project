@@ -9,8 +9,10 @@
       <b-col class="text-left">
         <b-button variant="outline-primary" @click="moveList">목록</b-button>
       </b-col>
-      <b-col class="text-right" v-if="userInfo.id === article.id">
-        <b-button variant="outline-info" size="sm" @click="moveModifyArticle" class="mr-2">글수정</b-button>
+      <b-col class="text-right" v-if="userInfo.userid === article.userid">
+        <b-button variant="outline-info" size="sm" @click="moveModifyArticle" class="mr-2"
+          >글수정</b-button
+        >
         <b-button variant="outline-danger" size="sm" @click="deleteArticle">글삭제</b-button>
       </b-col>
     </b-row>
@@ -18,7 +20,7 @@
       <b-col>
         <b-card
           :header-html="`<h3>${article.articleno}.
-          ${article.subject} [${article.hit}]</h3><div><h6>${article.id}</div><div>${article.regtime}</h6></div>`"
+          ${article.subject} [${article.hit}]</h3><div><h6>${article.userid}</div><div>${article.regtime}</h6></div>`"
           class="mb-2"
           border-variant="dark"
           no-body
