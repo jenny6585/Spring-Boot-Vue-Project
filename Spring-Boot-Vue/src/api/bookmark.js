@@ -1,5 +1,4 @@
 import { apiInstance } from "./index.js";
-
 const api = apiInstance();
 
 function listTodo(success, fail) {
@@ -7,11 +6,28 @@ function listTodo(success, fail) {
 }
 
 function writeTodo(todo, success, fail) {
-    api.post(`/todo`, JSON.stringify(todo)).then(success).catch(fail);
+    fetch(`http://localhost:9999/vue/todo/write`, {
+    method: "post",
+    body: JSON.stringify(todo),
+    headers: {                              // ***
+        "Content-Type": "application/json"    // ***
+    }                                       // ***
+    }).then(success).catch(fail);
+
+
+    //api.post(`/todo/write`, JSON.stringify(todo)).then(success).catch(fail);
 }
 
 function deleteTodo(param, success, fail) {
-    api.delete(`/todo`).then(success).catch(fail);
+
+    fetch(`http://localhost:9999/vue/todo/delete`, {
+    method: "post",
+    body: JSON.stringify(param.numlist),
+    headers: {                              // ***
+        "Content-Type": "application/json"    // ***
+    }                                       // ***
+    }).then(success).catch(fail);
+
 }
 
 function modifyTodo(todo, success, fail) {

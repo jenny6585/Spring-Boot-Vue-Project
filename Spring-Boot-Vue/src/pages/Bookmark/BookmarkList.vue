@@ -9,11 +9,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(todo,index) in sameUser" :key="index">
-                <td>
-                    <b-form-checkbox size="lg" v-model="todo.checked" @click="modifyTodoStatus">
+            <tr v-for="(todo,index) in sameUser" :key="index" >
+                <td v-if="todo.checked">
+                    <input checked type="checkbox" size="lg" v-model="todo.checked" @change="modifyTodoStatus(`${index}`)" />
                         <span :class="{ completed: todo.checked }" >{{ todo.content }}</span>
-                    </b-form-checkbox>
+                </td>
+                <td v-else>
+                    <input type="checkbox" size="lg"  v-model="todo.checked" @change="modifyTodoStatus(`${index}`)" />
+                        <span :class="{ completed: todo.checked }" >{{ todo.content }}</span>
                 </td>
             </tr>
         </tbody>
@@ -47,6 +50,9 @@ export default {
             },
         );
     },
+    watch:{
+
+    },
     components: { 
         Widget, 
         Sparklines,
@@ -56,7 +62,6 @@ export default {
     computed:{
         ...mapState(memberStore, ["userInfo"]),
         sameUser(){
-            
             return this.todos.filter((item)=>{return item.userid == this.userInfo.userid;});
         },
     },
@@ -65,21 +70,29 @@ export default {
             console.log("여기");
             this.$router.push({ name: "bookmarklist" });
         },
-        modifyTodoStatus(){
-            if(this.todo.checked === 0){
-                this.todo.checked = 1;
-                this.modifyTodo();
+        modifyTodoStatus(num){
+            console.log(this.todos[num]);
+            
+            if(this.todos[num].checked == true){
+                this.todos[num].checked = 1;
+                console.log("0->1");
+                console.log(this.todos[num].checked);
+                this.modifyTodo(num);
             }else{
-                this.todo.checked = 0;
-                this.modifyTodo();
+                this.todos[num].checked = 0;
+                console.log("1->0");
+                console.log(this.todos[num].checked);
+                this.modifyTodo(num);
             }
         },
-        modifyTodo() {
+        modifyTodo(num) {
             let param = {
-                userid: this.todo.userid,
-                content: this.todo.content,
-                status: this.todo.checked,
+                todono: this.todos[num].todono,
+                userid: this.todos[num].userid,
+                content: this.todos[num].content,
+                checked: this.todos[num].checked,
             };
+            console.log(param);
             modifyTodo(
                 param,
                 ({ data }) => {
@@ -95,11 +108,13 @@ export default {
             );
         },
         removeTodo(){
-            let param = this.numlist.filter(function(item){return item.checked===true;});//완료 애들 가져오기
+            let param = {
+                numlist: this.todos.filter((item)=>{return item.checked==true && item.userid==this.userInfo.userid;})
+            }
             deleteTodo(
                 param,
                 ({ data }) => {
-                let msg = "삭제 처리시 문제가 발생했습니다.";
+                let msg = "정말 삭제하시겠습니까?";
                 if (data === "success") {
                     msg = "삭제 완료되었습니다.";
                 }

@@ -8,6 +8,7 @@
           <b-input class="input-transparent" id="search-input" placeholder="Search Dashboard" />
         </b-input-group>
       </b-nav-form>
+      <!-- 로그인 했을때 -->
       <div v-if="userInfo">
         <b-nav-item-dropdown right class="avatar-toggle" menu-class="py-0">
           <template slot="button-content">
@@ -17,27 +18,29 @@
             <span class="text-white">{{ userInfo.username }}({{ userInfo.userid }})님 환영합니다.</span>
           </template>
           <notifications />
-        </b-nav-item-dropdown>
-        <b-nav-item class="divider d-md-down-none"></b-nav-item>
-        <b-nav-item-dropdown no-caret right class="mr-2" menu-class="dropdown-menu-settings">
+          <b-nav-item class="divider d-md-down-none"></b-nav-item>
+        <b-nav-item no-caret right class="mr-2">
           <template slot="button-content">
-            <i class="fi flaticon-settings-10 px-2" />
+            
           </template>
-          <b-dropdown-item
-            ><i class="la la-user" /><router-link :to="{ name: 'mypage' }" class="link align-self-center"
-              >내정보보기</router-link
-            ></b-dropdown-item
-          >
+          <b-dropdown-item float-left>
+            <i class="la la-user" />
+            <router-link :to="{ name: 'mypage' }" class="link align-self-center">내정보보기</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item float-left>
+            <i class="fi flaticon-settings-10 px-2 float-left" />
+            <router-link :to="{ name: 'mypage' }" class="link align-self-center">내정보 수정</router-link>
+          </b-dropdown-item>
           <b-dropdown-divider />
-          <b-dropdown-item-button @click.prevent="onClickLogout">
-            <i class="la la-sign-out" /> Log Out
-          </b-dropdown-item-button>
-        </b-nav-item-dropdown>
-        <b-nav-item class="d-md-down-none" @click="logout">
+        </b-nav-item>
+        <b-nav-item class="d-md-down-none float-left" @click="logout">
           <i class="fi flaticon-power-1 px-2" />
         </b-nav-item>
+        </b-nav-item-dropdown>
+        
 
       </div>
+      <!-- 로그인 안했을때 -->
       <div v-else>
         <b-button variant="primary" href="/user/login">로그인 / 회원가입</b-button>
       </div>

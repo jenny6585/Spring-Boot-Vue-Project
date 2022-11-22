@@ -1,10 +1,13 @@
 package com.ssafy.vue.model;
 
+import java.util.Arrays;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(value = "TodoDto : Todo정보", description = "Todo의 상세 정보를 나타낸다.")
-public class TodoDto {
+public class TodoDto {	
+	
 	@ApiModelProperty(value= "Todo번호")
 	private int todono;
 	@ApiModelProperty(value = "작성자 아이디")
@@ -22,7 +25,7 @@ public class TodoDto {
 	public String getUserid() {
 		return userid;
 	}
-	public void setUserId(String userid) {
+	public void setUserid(String userid) {
 		this.userid = userid;
 	}
 	public String getContent() {

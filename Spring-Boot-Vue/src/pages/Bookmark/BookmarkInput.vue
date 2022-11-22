@@ -58,7 +58,7 @@ export default {
             writeTodo(
                 param,
                 ({ data }) => {
-                let msg = "등록 처리시 문제가 발생했습니다.";
+                let msg = "등록하시겠습니까?";
                 if (data === "success") {
                     msg = "등록이 완료되었습니다.";
                 }
