@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ssafy.vue.model.MemberDto;
+import com.ssafy.vue.model.SecureMemberDto;
 import com.ssafy.vue.model.TodoDto;
+import com.ssafy.vue.model.mapper.BoardMapper;
 import com.ssafy.vue.model.mapper.MemberMapper;
 import com.ssafy.vue.model.mapper.TodoMapper;
 
@@ -56,6 +58,29 @@ public class MemberServiceImpl implements MemberService {
 	@Transactional
 	public boolean modifyMember(MemberDto memberDto) throws Exception {
 		return sqlSession.getMapper(MemberMapper.class).modifyMember(memberDto) == 1;
+	}
+
+	@Override
+	public boolean joinMember(MemberDto memberDto) throws Exception {
+		if(memberDto.getUserid() == null || memberDto.getUsername() == null || memberDto.getUserpwd() == null || memberDto.getEmail() == null || memberDto.getNumber() == null) {
+			throw new Exception();
+		}
+		return sqlSession.getMapper(MemberMapper.class).joinMember(memberDto) == 1;
+	}
+
+	@Override
+	public SecureMemberDto getSecure(String userid) throws Exception {
+		return sqlSession.getMapper(MemberMapper.class).getSecure(userid);
+	}
+
+	@Override
+	public void secureMember(SecureMemberDto secureMemberDto) throws Exception {
+		sqlSession.getMapper(MemberMapper.class).secureMember(secureMemberDto);
+	}
+
+	@Override
+	public MemberDto findMember(String userid) throws Exception {
+		return sqlSession.getMapper(MemberMapper.class).findMember(userid);
 	}
 
 }

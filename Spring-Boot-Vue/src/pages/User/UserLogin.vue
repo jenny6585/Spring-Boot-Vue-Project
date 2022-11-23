@@ -1,6 +1,8 @@
 <template>
-  <form class="mt" @submit.prevent="login">
-          <b-form-group label="ID" label-for="id">
+  <form class="mt-4" @submit.prevent="login">
+    <h2>LOGIN</h2>
+    <h2>-----------</h2>
+          <b-form-group class="mt-5" label="ID" label-for="id">
             <b-input-group>
               <b-input-group-text slot="prepend"><i class="la la-user text-white"></i></b-input-group-text>
               <b-alert show variant="danger" v-if="isLoginError">아이디 또는 비밀번호를 확인하세요.</b-alert>
@@ -13,7 +15,7 @@
                       @keyup.enter="confirm"/>
             </b-input-group>
           </b-form-group>
-          <b-form-group label="Password" label-for="password">
+          <b-form-group class="mt-5" label="Password" label-for="password">
             <b-input-group>
               <b-input-group-text slot="prepend"><i class="la la-lock text-white"></i></b-input-group-text>
               <input id="userpwd"
@@ -25,8 +27,8 @@
                       @keyup.enter="confirm"/>
             </b-input-group>
           </b-form-group>
-          <div class="bg-widget auth-widget-footer">
-            <b-button type="button" variant="danger" class="auth-btn" size="sm" @click="confirm">
+          <div class="auth-widget-footer mt-4">
+            <b-button type="button" variant="danger" class="auth-btn mt-5 mb-5" size="sm" @click="confirm">
               <span class="auth-btn-circle">
                 <i class="la la-caret-right"></i>
               </span>
@@ -35,10 +37,11 @@
             <p class="widget-auth-info mt-4">
               Don't have an account? Sign up now!
             </p>
-            <b-button type="button" variant="primary" class="auth-btn" size="sm" @click="movePage">
+            <b-button type="button" variant="primary" class="auth-btn mb-5" size="sm" @click="movePage">
               Create an Account
             </b-button>
-            <div class="social-buttons">
+            
+            <div class="social-buttons mt-5">
               <b-button variant="success" class="social-button">
                 <i class="social-icon social-naver"></i>
                 <p class="social-text">NAVER</p>

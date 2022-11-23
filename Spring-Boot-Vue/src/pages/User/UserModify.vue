@@ -1,6 +1,62 @@
 <template>
   <b-container class="bv-example-row mt-3">
-    <h2>회원가입</h2>
+    <!-- 모달 -->
+    <div>
+      <!-- Using value -->
+      <b-modal
+        visible
+        centered
+        id="my-modal"
+        header="test"
+        title="Confirm Approval"
+        hide-footer
+        hide-header-close
+        no-close-on-backdrop
+        no-close-on-esc
+      >
+        <template #modal-header>
+          <div class="mx-auto">
+            <h5>비밀번호를 입력해주세요</h5>
+          </div>
+        </template>
+
+        <div class="col-12">
+          <div class="ml-5 mr-5">
+            <b-form-input
+              type="password"
+              id="pin-input"
+              v-model="pin"
+              required
+            ></b-form-input>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <slot name="pin-error" class="text-danger text-center">{{
+            temp.comment
+          }}</slot>
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12 text-center">
+          <b-button
+            variant="primary"
+            size="sm"
+            class="mt-2 mr-2"
+            v-if="temp.commemt == userInfo.userpwd"
+            >확인</b-button
+          >
+          <b-button
+            variant="danger"
+            size="sm"
+            class="mt-2 ml-2"
+            @click="movelist"
+            >취소</b-button
+          >
+        </div>
+      </b-modal>
+    </div>
+    <!-- 모달 -->
+
+    <h2>내 정보 수정</h2>
     <b-col style="text-align: left">
       <b-form @submit="onSubmit" @reset="onReset">
         <b-form-group
@@ -15,7 +71,6 @@
             v-model="user.userid"
             type="text"
             required
-            placeholder="아이디 입력..."
             class="bg-white"
           ></b-form-input>
         </b-form-group>
@@ -31,7 +86,6 @@
             v-model="user.username"
             type="text"
             required
-            placeholder="이름 입력..."
             class="bg-white"
           ></b-form-input>
         </b-form-group>
@@ -53,22 +107,6 @@
         </b-form-group>
 
         <b-form-group
-          id="userpwdCheck-group"
-          label="비밀번호:"
-          label-for="pw"
-          description="비밀번호를 다시 입력하세요."
-        >
-          <b-form-input
-            id="userpwdCheck"
-            v-model="temp.userpwdCheck"
-            type="password"
-            required
-            placeholder="비밀번호 입력..."
-            class="bg-white"
-          ></b-form-input>
-        </b-form-group>
-
-        <b-form-group
           id="email-group"
           label="이메일:"
           label-for="email"
@@ -79,7 +117,6 @@
             v-model="user.email"
             type="text"
             required
-            placeholder="이메일 입력..."
             class="bg-white"
           ></b-form-input>
         </b-form-group>
@@ -100,34 +137,28 @@
           ></b-form-input>
         </b-form-group>
 
-        <div class="form-group">
-          <label>약관 동의</label>
-          <div data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <span>AGREE </span>
-              <input id="agree" type="checkbox" autocomplete="off" />
-            </label>
-            <a class="ml-3" href="#">이용약관</a>에 동의합니다.
-          </div>
-        </div>
-
         <b-button type="submit" variant="primary" class="m-1"
-          >회원가입</b-button
+          >정보 수정</b-button
         >
       </b-form>
     </b-col>
   </b-container>
 </template>
 
-            <script>
-import { joinMember } from "@/api/member";
+
+<script>
+import { mapState } from "vuex";
+import { modifyMember } from "@/api/member";
+
+const memberStore = "memberStore";
 
 export default {
-  name: "UserRegister",
+  name: "UserModify",
   data() {
     return {
       temp: {
-        userpwdCheck: "",
+        comment:"",
+        pwdCheck: false,
       },
       user: {
         userid: "",
@@ -142,7 +173,23 @@ export default {
   props: {
     type: { type: String },
   },
+  computed: {
+    ...mapState(memberStore, ["userInfo"]),
+  },
+  created() {
+    this.user.userid = this.userInfo.userid;
+    this.user.username = this.userInfo.username;
+    this.user.userpwd = this.userInfo.userpwd;
+    this.user.email = this.userInfo.email;
+    this.user.number = this.userInfo.number;
+  },
   methods: {
+    checkPW(comment){
+      if(this.user.userid == this.temp.comment){
+        //@click="show=false"
+      }
+    },
+
     onSubmit(event) {
       event.preventDefault();
 
@@ -183,7 +230,7 @@ export default {
       this.user.number = 0;
       this.moveList();
     },
-    registUser() {
+    modifyMember() {
       let param = {
         userid: this.user.userid,
         username: this.user.username,
@@ -191,7 +238,7 @@ export default {
         email: this.user.email,
         number: this.user.number,
       };
-      joinMember(
+      modifyMember(
         param,
         ({ data }) => {
           let msg = "회원가입 처리시 문제가 발생했습니다.";
@@ -199,7 +246,6 @@ export default {
             msg = "회원가입이 완료되었습니다.";
           }
           alert(msg);
-          this.onReset();
           this.moveList();
         },
         (error) => {

@@ -1,7 +1,7 @@
 <template>
   <div class="auth-page">
-    <b-container>
-      <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'></h3>" customHeader>
+    <b-container >
+      <Widget class="widget-auth-new mx-auto" title="<h3 class='mt-0'></h3>" customHeader>
         <p class="widget-auth-info">
         </p>
         <router-view></router-view>
@@ -21,7 +21,14 @@ import Widget from '@/components/Widget/Widget';
 export default {
   name: 'User',
   components:{
-    Widget,
+    Widget
   }
 };
 </script>
+
+<style scoped>
+.auth-page{
+
+}
+
+</style>

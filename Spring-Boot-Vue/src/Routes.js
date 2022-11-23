@@ -14,6 +14,7 @@ import BookmarkList from '@/pages/Bookmark/BookmarkList';
 import UserRegister from '@/pages/User/UserRegister';
 import UserLogin from '@/pages/User/UserLogin';
 import UserMyPage from '@/pages/User/UserMyPage';
+import UserModify from '@/pages/User/UserModify';
 
 import store from "@/store";
 
@@ -54,6 +55,11 @@ const routes = [
         path: "login",
         name: "login",
         component: UserLogin,
+      },
+      {
+        path: "modify",
+        name: "modify",
+        component: UserModify,
       },
       {
         path: "mypage",

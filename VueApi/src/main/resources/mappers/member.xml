@@ -40,4 +40,28 @@
 		where userid = #{userid}
 	</update>
 	
+	<insert id="joinMember" parameterType="memberDto">
+		insert into ssafy_member (userid, username, userpwd, email, joindate, token, number)
+		values (#{userid}, #{username}, #{userpwd}, #{email}, now(), null, #{number})
+	</insert>
+	
+	<select id="findMember" parameterType="string" resultType="memberDto">
+		select username, userid, email, joindate, number
+		from ssafy_member
+		where userid = #{userid}
+	</select>
+	
+	
+	<select id="getSecure" parameterType="string" resultType="secureMemberDto">
+		select userid, salt, seckey
+		from openeg_security
+		where userid = #{id}
+	</select>
+	
+	<insert id="secureMember" parameterType="secureMemberDto">
+		insert into openeg_security (userid, salt, seckey)
+		values (#{id}, #{salt}, #{seckey})
+	</insert>
+	
+	
 </mapper>

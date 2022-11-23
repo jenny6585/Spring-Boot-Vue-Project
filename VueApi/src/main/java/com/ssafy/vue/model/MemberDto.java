@@ -59,7 +59,7 @@ public class MemberDto {
 		return "MemberDto [userid=" + userid + ", username=" + username + ", userpwd=" + userpwd + ", email=" + email
 				+ ", joindate=" + joindate + ", number=" + number + "]";
 	}
-
 	
+
 
 }

@@ -1,7 +1,7 @@
 package com.ssafy.vue.model.service;
 
 import com.ssafy.vue.model.MemberDto;
-import com.ssafy.vue.model.TodoDto;
+import com.ssafy.vue.model.SecureMemberDto;
 
 public interface MemberService {
 
@@ -11,5 +11,10 @@ public interface MemberService {
 	public Object getRefreshToken(String userid) throws Exception;
 	public void deleRefreshToken(String userid) throws Exception;
 	public boolean modifyMember(MemberDto memberDto) throws Exception;
+	public boolean joinMember(MemberDto memberDto) throws Exception;
+	public MemberDto findMember(String userid) throws Exception;
+
+	public SecureMemberDto getSecure(String userid) throws Exception;
+	public void secureMember(SecureMemberDto secureMemberDto) throws Exception;
 	
 }

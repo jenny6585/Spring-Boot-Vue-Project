@@ -27,8 +27,14 @@ function deleteTodo(param, success, fail) {
         "Content-Type": "application/json"    // ***
     }                                       // ***
     }).then(success).catch(fail);
+<<<<<<< HEAD
+    
+    //api.post(`http://localhost:9999/vue/todo/delete`, {m: param.numlist ,}).then(success).catch(fail);
+=======
 
+>>>>>>> 969988c1d05da1afe4ab674afb384aec0b4291cf
 }
+
 
 function modifyTodo(todo, success, fail) {
     api.put(`/todo`, JSON.stringify(todo)).then(success).catch(fail);
