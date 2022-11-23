@@ -6,7 +6,7 @@
     </b-breadcrumb>
     <b-row>
       <b-col lg="7">
-        <KakaoMap />
+        <ka-kao-map />
       </b-col>
     </b-row>
   </div>
@@ -14,20 +14,16 @@
 
 <script>
 import Widget from '@/components/Widget/Widget';
-import KakaoMap from "@/views/Map";
+import KaKaoMap from "@/views/KaKaoMap.vue";
 
 
 export default {
   name: 'BikeMap',
   components: {
-    Widget, KakaoMap,
+    Widget,
+    KaKaoMap,
   },
 };
 </script>
 
 <style src="./Visits.scss" lang="scss" />
-#map{
-  width:1000px;
-  height:500px
-}
-</style>

@@ -2,18 +2,24 @@
   <b-row class="mb-1">
     <b-col style="text-align: left">
       <b-form @submit="onSubmit" @reset="onReset">
-        <b-form-group id="userid-group" label="작성자:" label-for="id" description="작성자를 입력하세요.">
+        <b-form-group id="userid-group" label="작성자:" label-for="id">
           <b-form-input
             id="id"
             :disabled="isUserid"
-            v-model="article.id"
+            v-model="article.userid"
             type="text"
             required
-            placeholder="작성자 입력..."
+            readonly
+            :placeholder="this.userInfo.userid"
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="subject-group" label="제목:" label-for="subject" description="제목을 입력하세요.">
+        <b-form-group
+          id="subject-group"
+          label="제목:"
+          label-for="subject"
+          description="제목을 입력하세요."
+        >
           <b-form-input
             id="subject"
             v-model="article.subject"
@@ -33,7 +39,9 @@
           ></b-form-textarea>
         </b-form-group>
 
-        <b-button type="submit" variant="primary" class="m-1" v-if="this.type === 'register'">글작성</b-button>
+        <b-button type="submit" variant="primary" class="m-1" v-if="this.type === 'register'"
+          >글작성</b-button
+        >
         <b-button type="submit" variant="primary" class="m-1" v-else>글수정</b-button>
         <b-button type="reset" variant="danger" class="m-1">초기화</b-button>
       </b-form>
@@ -43,14 +51,15 @@
 
 <script>
 import { writeArticle, modifyArticle, getArticle } from "@/api/board";
-
+import { mapState } from "vuex";
+const memberStore = "memberStore";
 export default {
   name: "BoardInputItem",
   data() {
     return {
       article: {
         articleno: 0,
-        id: "",
+        userid: "",
         subject: "",
         content: "",
       },
@@ -67,7 +76,7 @@ export default {
         param,
         ({ data }) => {
           // this.article.articleno = data.article.articleno;
-          // this.article.id = data.article.id;
+          // this.article.userid = data.article.userid;
           // this.article.subject = data.article.subject;
           // this.article.content = data.article.content;
           this.article = data;
@@ -82,13 +91,14 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-
       let err = true;
       let msg = "";
-      !this.article.id && ((msg = "작성자 입력해주세요"), (err = false), this.$refs.id.focus());
-      err && !this.article.subject && ((msg = "제목 입력해주세요"), (err = false), this.$refs.subject.focus());
-      err && !this.article.content && ((msg = "내용 입력해주세요"), (err = false), this.$refs.content.focus());
-
+      err &&
+        !this.article.subject &&
+        ((msg = "제목 입력해주세요"), (err = false), this.$refs.subject);
+      err &&
+        !this.article.content &&
+        ((msg = "내용 입력해주세요"), (err = false), this.$refs.content);
       if (!err) alert(msg);
       else this.type === "register" ? this.registArticle() : this.modifyArticle();
     },
@@ -101,10 +111,11 @@ export default {
     },
     registArticle() {
       let param = {
-        id: this.article.id,
+        userid: this.userInfo.userid,
         subject: this.article.subject,
         content: this.article.content,
       };
+      console.log(param.userid);
       writeArticle(
         param,
         ({ data }) => {
@@ -123,7 +134,7 @@ export default {
     modifyArticle() {
       let param = {
         articleno: this.article.articleno,
-        id: this.article.id,
+        userid: this.article.userid,
         subject: this.article.subject,
         content: this.article.content,
       };
@@ -146,6 +157,9 @@ export default {
     moveList() {
       this.$router.push({ name: "boardlist" });
     },
+  },
+  computed: {
+    ...mapState(memberStore, ["userInfo"]),
   },
 };
 </script>

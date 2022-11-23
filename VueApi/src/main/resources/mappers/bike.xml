@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ssafy.vue.model.mapper.BikeMapper">
+
+	<select id="listBike" parameterType="map" resultType="bikeDto">
+		select b.description , b.index,t.latitude , t.longitude  
+		from bike b join total_places t 
+		on b.id = t.name
+		order by b.index desc;
+	</select>
+	
+	<select id="getTotalCount" parameterType="map" resultType="int">
+		select count(index)
+		from bike
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				where bike like concat('%', #{word}, '%')
+			</if>
+			<if test="key != 'subject'">
+				where ${key} = #{word}
+			</if>
+		</if>
+	</select>
+	
+	<select id="getBike" parameterType="int" resultType="bikeDto">
+		select b.description , b.index,t.latitude , t.longitude  
+		from bike b join total_places t 
+		on b.id = t.name
+		where b.index = #{index};
+	</select>
+	
+</mapper>
+

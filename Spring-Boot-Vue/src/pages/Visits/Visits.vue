@@ -8,7 +8,6 @@
     <b-row>
       <b-col lg="7">
         <Widget class="bg-transparent">
-          <Map />
         </Widget>
       </b-col>
       <b-col lg="4" offset-lg="1">
@@ -19,7 +18,6 @@
         >
           <p>Status: <strong>Live</strong></p>
           <p>
-            <span class="circle bg-primary text-white"><i class="la la-map-marker" /></span> &nbsp;
             146 Countries, 2759 Cities
           </p>
           <div class="row progress-stats">
@@ -329,7 +327,6 @@
 <script>
 import Vue from 'vue';
 import Widget from '@/components/Widget/Widget';
-import Map from './components/Map/Map';
 import Calendar from './components/Calendar/Calendar';
 import AreaChart from './components/AreaChart/AreaChart';
 import AnimatedNumber from "animated-number-vue";
@@ -337,7 +334,7 @@ import AnimatedNumber from "animated-number-vue";
 export default {
   name: 'Visits',
   components: {
-    Widget, Map, Calendar, AreaChart, AnimatedNumber
+    Widget,  Calendar, AreaChart, AnimatedNumber
   },
   data() {
     return {

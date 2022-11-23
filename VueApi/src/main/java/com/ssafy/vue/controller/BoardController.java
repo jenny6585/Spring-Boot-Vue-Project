@@ -83,4 +83,12 @@ public class BoardController {
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 	}
+	
+	@ApiOperation(value = "게시판 전체 글 수", notes = "글의 수를 반환한다.", response = int.class)
+    @GetMapping("/total")
+    // 리스트 수를 보내주기 위한 메소드
+    public int getTotalCount(@ApiParam(value = "게시글을 얻기위한 부가정보.", required = true) BoardParameterDto boardParameterDto) throws Exception {
+        logger.info("totlacount - 호출:   "+boardService.getTotalCount(boardParameterDto));
+        return boardService.getTotalCount(boardParameterDto);
+    }
 }
