@@ -27,8 +27,4 @@ export default {
 </script>
 
 <style scoped>
-.auth-page{
-
-}
-
 </style>

@@ -46,9 +46,9 @@
 	</insert>
 	
 	<select id="findMember" parameterType="string" resultType="memberDto">
-		select username, userid, email, joindate, number
+		select username, userid, userpwd, email, joindate, number, token
 		from ssafy_member
-		where userid = #{userid}
+		where userid = ${userid}
 	</select>
 	
 	

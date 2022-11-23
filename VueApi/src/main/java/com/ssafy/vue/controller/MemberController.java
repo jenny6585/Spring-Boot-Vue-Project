@@ -187,6 +187,24 @@ public class MemberController {
 			}
 		}
 	}
+	
+	@ApiOperation(value = "아이디 중복 검사", notes = "아이디 중복 검사한다. 그리고 DB수정 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
+	@PostMapping("/find")
+	public ResponseEntity<String> findMember(@RequestBody @ApiParam(value = "아이디 정보.", required = true) String userid) throws Exception {
+		logger.info("findMember - 호출 {}",userid);
+		Map<String, Object> resultMap = new HashMap<>();
+		if(memberService.findMember(userid)!=null) {
+			//이미 존재하는 아이디
+			resultMap.put("message", "이미 존재하는 아이디입니다.");
+			System.out.println("있다"+memberService.findMember(userid));
+			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+		}else {
+			System.out.println(memberService.findMember(userid));
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		
+		
+	}
 		
 
 }

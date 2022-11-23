@@ -97,42 +97,74 @@ const routes = [
         name: "Boards",
         component: () => import("@/views/AppBoard"),
         redirect: "board/list",
-  children: [
-    {
-      path: "list",
-      name: "boardlist",
-      component: () => import("@/pages/board/BoardList"),
-    },
-    {
-      path: "write",
-      name: "boardwrite",
-      beforeEnter: onlyAuthUser,
-      component: () => import("@/pages/board/BoardWrite"),
-    },
-    {
-      path: "view/:articleno",
-      name: "boardview",
-      beforeEnter: onlyAuthUser,
-      component: () => import("@/pages/board/BoardView"),
-    },
-    {
-      path: "modify",
-      name: "boardmodify",
-      beforeEnter: onlyAuthUser,
-      component: () => import("@/pages/board/BoardModify"),
-    },
-    {
-      path: "delete/:articleno",
-      name: "boarddelete",
-      beforeEnter: onlyAuthUser,
-      component: () => import("@/pages/board/BoardDelete"),
-    },
-  ],
+        children: [
+          {
+            path: "list",
+            name: "boardlist",
+            component: () => import("@/pages/board/BoardList"),
+          },
+          {
+            path: "write",
+            name: "boardwrite",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardWrite"),
+          },
+          {
+            path: "view/:articleno",
+            name: "boardview",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardView"),
+          },
+          {
+            path: "modify",
+            name: "boardmodify",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardModify"),
+          },
+          {
+            path: "delete/:articleno",
+            name: "boarddelete",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardDelete"),
+          },
+        ],
       },
       {
         path: 'notifications',
         name: 'Notifications',
-        component: Notifications,
+        component: () => import("@/views/AppNotification"),
+        redirect: "board/list",
+        children: [
+          {
+            path: "notificationslist",
+            name: "notificationslist",
+            component: () => import("@/pages/board/BoardList"),
+          },
+          {
+            path: "notificationswrite",
+            name: "notificationswrite",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardWrite"),
+          },
+          {
+            path: "notificationsview/:articleno",
+            name: "notificationsview",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardView"),
+          },
+          {
+            path: "notificationsmodify",
+            name: "notificationsmodify",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardModify"),
+          },
+          {
+            path: "notificationsdelete/:articleno",
+            name: "notificationsdelete",
+            beforeEnter: onlyAuthUser,
+            component: () => import("@/pages/board/BoardDelete"),
+          },
+        ],
       },
       {
         path: 'components/icons',

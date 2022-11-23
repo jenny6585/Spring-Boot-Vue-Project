@@ -25,7 +25,11 @@ async function joinMember(user, success, fail) {
 }
 
 async function modifyMember(user, success, fail) {
-  await api.put(`/todo`, JSON.stringify(user)).then(success).catch(fail);
+  await api.put(`/user`, JSON.stringify(user)).then(success).catch(fail);
 }
 
-export { login, findById, tokenRegeneration, logout, joinMember, modifyMember };
+async function findMember(userid, success, fail) {
+  await api.post(`/user/find`, JSON.stringify(userid)).then(success).catch(fail);
+}
+
+export { login, findById, tokenRegeneration, logout, joinMember, modifyMember, findMember };

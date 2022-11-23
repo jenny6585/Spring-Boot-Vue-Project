@@ -8,16 +8,16 @@
     </header>
 
     <ul class="nav">
-      <h5 class="navTitle">BIKE MAP</h5>
+      <h5 class="navTitle">따릉이 지도</h5>
       <NavLink
         :activeItem="activeItem"
-        header="BikeMap"
+        header="Bike Map"
         link="/app/bikemap"
         iconName="flaticon-home-3"
         index="bikemap"
         isHeader
       />
-      <h5 class="navTitle">BOARD</h5>
+      <h5 class="navTitle">즐겨찾기</h5>
       <NavLink
         header="Bookmark"
         link="/app/Bookmark"
@@ -25,17 +25,25 @@
         index="bookmark"
         isHeader
       />
+      <h5 class="navTitle">게시판</h5>
       <NavLink
-          header="Recommand Board"
+          header="공유 게시판"
           link="/app/board"
           iconName="flaticon-equal-3"
           index="board"
           isHeader
         />
       <NavLink
-        header="Notifications"
+        header="공지사항"
         link="/app/notifications"
         iconName="flaticon-bell"
+        index="notifications"
+        isHeader
+      />
+      <NavLink
+        header="QnA"
+        link="/app/notifications"
+        iconName="flaticon-message-circle"
         index="notifications"
         isHeader
       />

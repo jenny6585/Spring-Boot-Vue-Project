@@ -19,6 +19,13 @@
             class="bg-white"
           ></b-form-input>
         </b-form-group>
+        <b-button class="mb-4" variant="primary" @click="idDouble">아이디 중복검사</b-button>
+        <div v-if="temp.idCheck">
+          <h6 class="warn-id" v-if="temp.alertid">사용 불가능한 아이디입니다...</h6>
+          <h6 class="ok-id" v-else-if="!temp.alertid">사용가능한 아이디입니다...</h6>
+        </div>
+
+        
 
         <b-form-group
           id="username-group"
@@ -120,7 +127,7 @@
 </template>
 
             <script>
-import { joinMember } from "@/api/member";
+import { joinMember, findMember } from "@/api/member";
 
 export default {
   name: "UserRegister",
@@ -128,6 +135,8 @@ export default {
     return {
       temp: {
         userpwdCheck: "",
+        idCheck : false,
+        alertid: false,
       },
       user: {
         userid: "",
@@ -143,6 +152,28 @@ export default {
     type: { type: String },
   },
   methods: {
+    idDouble(){
+      let userid = this.user.userid;
+      console.log(userid);
+      findMember(
+        userid,
+        ({ data }) => {
+          let msg = "아이디가 이미 존재합니다.";
+          if (data === "success") {
+            msg = "사용 가능";
+            this.temp.alertid = false;
+          }else{
+            this.temp.alertid = true;
+          }
+          alert(msg);
+          this.temp.idCheck = true;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    },
+
     onSubmit(event) {
       event.preventDefault();
 
@@ -214,4 +245,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.warn-id{
+  color:red;
+  font-weight: bold;
+}
+.ok-id{
+  font-weight: bold;
+}
+</style>
