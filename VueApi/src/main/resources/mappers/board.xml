@@ -41,7 +41,6 @@
 		</if>
 	</select>
 	
-	
 	<select id="getArticle" parameterType="int" resultType="boardDto">
 		select articleno, userid, subject, content, hit, regtime
 		from board

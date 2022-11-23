@@ -11,21 +11,6 @@ public class PageNavigation {
 	private int naviSize;
 	private int countPerPage;
 	private String navigator;
-	
-	
-
-	public PageNavigation() {
-		super();
-	}
-
-
-	public PageNavigation(int maxLength, int pg, int spp) {
-		this.totalCount = maxLength;
-		this.currentPage = pg;
-		this.naviSize = spp;
-		makeNavigator();
-	}
-
 
 	public boolean isStartRange() {
 		return startRange;
@@ -84,7 +69,7 @@ public class PageNavigation {
 	}
 
 	public String getNavigator() {
-		return this.navigator;
+		return navigator;
 	}
 
 	public int getCountPerPage() {

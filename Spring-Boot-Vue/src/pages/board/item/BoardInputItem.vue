@@ -52,9 +52,7 @@
 <script>
 import { writeArticle, modifyArticle, getArticle } from "@/api/board";
 import { mapState } from "vuex";
-
 const memberStore = "memberStore";
-
 export default {
   name: "BoardInputItem",
   data() {
@@ -93,7 +91,6 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-
       let err = true;
       let msg = "";
       err &&
@@ -102,7 +99,6 @@ export default {
       err &&
         !this.article.content &&
         ((msg = "내용 입력해주세요"), (err = false), this.$refs.content);
-
       if (!err) alert(msg);
       else this.type === "register" ? this.registArticle() : this.modifyArticle();
     },

@@ -5,12 +5,12 @@
 <mapper namespace="com.ssafy.vue.model.mapper.TodoMapper">
 
 	<insert id="writeTodo" parameterType="todoDto">
-		insert into board (userid, content, status)
-		values (#{userid}, #{content}, #{status})
+		insert into todo (userid, content, checked)
+		values (#{userid}, #{content}, 0)
 	</insert>
 	
 	<select id="listTodo" resultType="todoDto">
-		select todono, userid, content, status
+		select todono, userid, content, checked
 		from todo
 		order by todono desc
 	</select>
@@ -21,8 +21,8 @@
 	</delete>
 	
 	<update id="modifyTodo" parameterType="todoDto">
-		update board
-		set userid = #{userid}, content = #{content}, status = #{status}
+		update todo
+		set userid = #{userid}, content = #{content}, checked = #{checked}
 		where todono = #{todono}
 	</update>
 

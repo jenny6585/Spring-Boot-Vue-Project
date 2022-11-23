@@ -38,9 +38,7 @@
 // import moment from "moment";
 import { getArticle } from "@/api/board";
 import { mapState } from "vuex";
-
 const memberStore = "memberStore";
-
 export default {
   name: "BoardDetail",
   data() {

@@ -4,30 +4,27 @@
       <b-col>
         <Widget title="<h5>맛집추천 <span class='fw-semi-bold'>게시판</span></h5>" customHeader>
           <div class="table-resposive">
-            <b-table striped hover :items="articles" :fields="fields" @row-clicked="viewArticle">
-              <template #cell(subject)="data">
-                <router-link
-                  :to="{ name: 'boardview', params: { articleno: data.item.articleno } }"
-                >
-                  {{ data.item.subject }}
-                </router-link>
-              </template>
-            </b-table>
+           <b-table striped hover :items="articles" :fields="fields" @row-clicked="viewArticle">
+          <template #cell(subject)="data">
+            <router-link :to="{ name: 'boardview', params: { articleno: data.item.articleno } }">
+              {{ data.item.subject }}
+            </router-link>
+          </template>
+        </b-table>
           </div>
           <div class="clearfix">
             <div class="float-right">
               <b-button variant="default" class="mr-3" size="sm" @click="moveWrite">
-                작성하기</b-button
-              >
+                작성하기</b-button>
             </div>
             <p>부적절한 내용의 게시글은 사전 통보 없이 삭제될 수 있습니다.</p>
           </div>
           <b-pagination
-            v-model="currentPage"
-            :per-page="5"
-            :total-rows="this.totalPage"
-            align="center"
-          ></b-pagination>
+              v-model="currentPage"
+              :per-page="5"
+              :total-rows= "totalPage"
+              align="center"
+            ></b-pagination>
         </Widget>
       </b-col>
     </b-row>
@@ -43,8 +40,11 @@ import { Table, TableColumn } from "element-ui";
 
 export default {
   name: "BoardList",
-  components: { Widget, Sparklines, [Table.name]: Table, [TableColumn.name]: TableColumn },
-
+  components: { Widget, Sparklines, 
+  [Table.name]: Table,
+  [TableColumn.name]: TableColumn,
+ },
+  
   data() {
     return {
       articles: [],
@@ -57,6 +57,7 @@ export default {
       ],
       currentPage: 1,
       totalPage: 0,
+      temp:10,
     };
   },
   created() {
@@ -79,12 +80,12 @@ export default {
       param,
       ({ data }) => {
         this.totalPage = data;
-        alert(this.totalPage);
       },
       (error) => {
         alert(error);
       }
     );
+    
   },
   methods: {
     moveWrite() {
@@ -96,6 +97,7 @@ export default {
         params: { articleno: article.articleno },
       });
     },
+    
   },
 
   watch: {
@@ -118,18 +120,11 @@ export default {
             alert(error);
           }
         );
-        getTotalCount(
-          param,
-          ({ data }) => {
-            this.totalPage = data;
-          },
-          (error) => {
-            alert(error);
-          }
-        );
       },
     },
   },
+
+
 };
 </script>
 

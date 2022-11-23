@@ -75,7 +75,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public int getTotalCount(BoardParameterDto boardParameterDto) throws Exception {
-		return sqlSession.getMapper(BoardMapper.class).getTotalCount(boardParameterDto);
-	}
+    public int getTotalCount(BoardParameterDto boardParameterDto) throws Exception{
+        return sqlSession.getMapper(BoardMapper.class).getTotalCount(boardParameterDto);
+    }
 }

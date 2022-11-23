@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ssafy.util.PageNavigation;
 import com.ssafy.vue.model.BoardDto;
 import com.ssafy.vue.model.BoardParameterDto;
 import com.ssafy.vue.model.service.BoardService;
@@ -35,7 +34,6 @@ public class BoardController {
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	private static final String SUCCESS = "success";
 	private static final String FAIL = "fail";
-	
 
 	@Autowired
 	private BoardService boardService;
@@ -53,17 +51,8 @@ public class BoardController {
 	@ApiOperation(value = "게시판 글목록", notes = "모든 게시글의 정보를 반환한다.", response = List.class)
 	@GetMapping
 	public ResponseEntity<List<BoardDto>> listArticle(@ApiParam(value = "게시글을 얻기위한 부가정보.", required = true) BoardParameterDto boardParameterDto) throws Exception {
-//		logger.info("listArticle - 호출");
-		
+		logger.info("listArticle - 호출");
 		return new ResponseEntity<List<BoardDto>>(boardService.listArticle(boardParameterDto), HttpStatus.OK);
-	}
-	
-	@ApiOperation(value = "게시판 전체 글 수", notes = "글의 수를 반환한다.", response = int.class)
-	@GetMapping("/total")
-	// 리스트 수를 보내주기 위한 메소드
-	public int getTotalCount(@ApiParam(value = "게시글을 얻기위한 부가정보.", required = true) BoardParameterDto boardParameterDto) throws Exception {
-		logger.info("totlacount - 호출:   "+boardService.getTotalCount(boardParameterDto));
-		return boardService.getTotalCount(boardParameterDto);
 	}
 	
 	@ApiOperation(value = "게시판 글보기", notes = "글번호에 해당하는 게시글의 정보를 반환한다.", response = BoardDto.class)
@@ -94,4 +83,12 @@ public class BoardController {
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 	}
+	
+	@ApiOperation(value = "게시판 전체 글 수", notes = "글의 수를 반환한다.", response = int.class)
+    @GetMapping("/total")
+    // 리스트 수를 보내주기 위한 메소드
+    public int getTotalCount(@ApiParam(value = "게시글을 얻기위한 부가정보.", required = true) BoardParameterDto boardParameterDto) throws Exception {
+        logger.info("totlacount - 호출:   "+boardService.getTotalCount(boardParameterDto));
+        return boardService.getTotalCount(boardParameterDto);
+    }
 }
