@@ -74,7 +74,6 @@ export default {
             
         },
         moveList() {
-            console.log("여기");
             this.$router.push({ name: "bookmarklist" });
         },
     },

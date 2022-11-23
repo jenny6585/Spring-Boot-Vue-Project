@@ -939,3 +939,587 @@ java.sql.SQLSyntaxErrorException: Unknown column 'checked' in 'field list'
  java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.4.1/java.lang.Thread.run(Thread.java:833)
+[2m2022-11-23 10:06:00.762[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-23 10:06:00.842[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 800 ms
+[2m2022-11-23 10:06:01.495[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-23 10:06:09.622[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-23 10:06:09.623[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-23 10:06:09.648[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 10:06:10.779[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:10.802[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 10:06:17.009[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTY1NTc2OTkwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkxNjU2MzYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJpZCI6InNzYWZ5In0.cxlsw1B2K7gt7T_GeWuS4GEd1vUwSD-gjdrQFpmK2nQ
+[2m2022-11-23 10:06:17.010[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTY1NTc3MDA0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NzAzNzUxNzcsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VyaWQiOiJzc2FmeSJ9.sQddakpzfPjv2i_YT7ULaBawbktLSEbTLNlrPCz4Ta8
+[2m2022-11-23 10:06:17.028[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:18.227[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 10:06:20.284[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m writeTodo - 호출
+[2m2022-11-23 10:06:21.492[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 10:06:23.045[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m modifyTodo - 호출 TodoDto [todono=29, userid=ssafy, content=ㅇㅇㅇ, checked=1]
+[2m2022-11-23 10:06:24.042[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 10:06:24.478[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 10:06:25.276[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m deleteTodo - 호출
+[2m2022-11-23 10:06:26.447[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 10:06:30.862[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:30.865[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 10:06:31.758[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:32.093[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:32.628[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:32.670[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 5
+[2m2022-11-23 10:06:33.559[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:33.562[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 10:06:34.414[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:34.425[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 6
+[2m2022-11-23 10:06:35.423[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:35.426[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 10:06:36.293[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:37.172[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:38.053[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:38.064[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 4
+[2m2022-11-23 10:06:39.420[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:39.436[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 4
+[2m2022-11-23 10:06:40.791[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:40.793[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 10:06:42.110[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 10:06:43.231[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 10:06:43.234[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 11:35:45.270[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 11:35:46.035[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:35:46.037[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 11:36:20.429[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 11:36:35.451[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:35.453[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 11:36:38.712[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:40.384[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:41.376[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:42.352[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:43.424[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:44.416[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:45.320[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:36:46.600[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:53:40.228[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 11:53:57.571[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:53:57.574[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 11:53:58.059[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 11:53:58.675[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 11:53:58.678[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 11:54:05.348[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 13:22:48.720[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 13:23:57.416[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 14:36:01.497[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:01.501[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 14:36:03.492[0;39m [31mERROR[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT expired at 2022-11-23T10:07:16Z. Current time: 2022-11-23T14:36:03Z, a difference of 16127491 milliseconds.  Allowed clock skew: 0 milliseconds.
+[2m2022-11-23 14:36:03.492[0;39m [31mERROR[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 불가능 토큰!!!
+[2m2022-11-23 14:36:03.497[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m token : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTY1NTc3MDA0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NzAzNzUxNzcsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VyaWQiOiJzc2FmeSJ9.sQddakpzfPjv2i_YT7ULaBawbktLSEbTLNlrPCz4Ta8, memberDto : MemberDto [userid=ssafy, username=김싸피, userpwd=null, email=ssafy@ssafy.com, joindate=2022-11-17 10:23:18, number=null]
+[2m2022-11-23 14:36:03.500[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m token : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTgxNzYzNDk5LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkxODE4MjMsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJpZCI6InNzYWZ5In0.rVdcWtWRI1YSP1Ec9NEkAYNAnOXAYaaZjPI5weLl7GM
+[2m2022-11-23 14:36:03.500[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 정상적으로 액세스토큰 재발급!!!
+[2m2022-11-23 14:36:03.511[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 4
+[2m2022-11-23 14:36:05.490[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:05.493[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 14:36:09.130[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:36:09.142[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 6
+[2m2022-11-23 14:36:10.450[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:10.452[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 14:36:11.784[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:36:11.794[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 3
+[2m2022-11-23 14:36:13.145[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:13.147[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 14:36:14.064[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:36:14.074[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 5
+[2m2022-11-23 14:36:16.362[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:16.364[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 14:36:17.095[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:36:17.105[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 6
+[2m2022-11-23 14:36:19.818[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:19.820[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   6
+[2m2022-11-23 14:36:21.304[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:22.048[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:23.320[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:36:54.347[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m writeArticle - 호출
+[2m2022-11-23 14:36:55.960[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:55.963[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:36:58.815[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:36:58.825[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:36:59.945[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:36:59.947[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:00.640[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:00.648[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:01.209[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:01.211[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:01.703[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:01.712[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:02.761[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:02.762[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:03.424[0;39m [31mERROR[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT expired at 2022-11-23T14:37:03Z. Current time: 2022-11-23T14:37:03Z, a difference of 424 milliseconds.  Allowed clock skew: 0 milliseconds.
+[2m2022-11-23 14:37:03.424[0;39m [31mERROR[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 불가능 토큰!!!
+[2m2022-11-23 14:37:03.427[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m token : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTY1NTc3MDA0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NzAzNzUxNzcsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VyaWQiOiJzc2FmeSJ9.sQddakpzfPjv2i_YT7ULaBawbktLSEbTLNlrPCz4Ta8, memberDto : MemberDto [userid=ssafy, username=김싸피, userpwd=null, email=ssafy@ssafy.com, joindate=2022-11-17 10:23:18, number=null]
+[2m2022-11-23 14:37:03.429[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m token : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTgxODIzNDI4LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkxODE4ODMsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJpZCI6InNzYWZ5In0.N-dIdXpSomTtzpp9ykqxZu7X3sRBwU1jkUgv8GCm8RM
+[2m2022-11-23 14:37:03.429[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 정상적으로 액세스토큰 재발급!!!
+[2m2022-11-23 14:37:03.434[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:03.848[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:03.851[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:04.184[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:04.192[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:04.537[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:04.538[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:04.863[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:04.872[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:05.169[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:05.171[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:05.431[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:05.440[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:05.585[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:05.587[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:06.551[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:06.559[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:06.706[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:06.708[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:06.895[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:06.904[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:07.041[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:07.044[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:09.944[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:09.953[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:10.313[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:10.315[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:10.615[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:10.624[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:10.864[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:10.866[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:12.088[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:12.095[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:12.460[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:12.462[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:12.752[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:12.760[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:13.040[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:13.043[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:13.263[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:13.272[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:13.489[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:13.491[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:13.759[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:13.766[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:13.978[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:13.981[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:14.207[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:14.214[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:14.433[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:14.435[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:14.680[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:14.688[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:14.945[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:14.947[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:15.279[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:15.287[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:15.553[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:15.554[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:15.839[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:15.846[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:16.137[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:16.139[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:16.383[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:16.391[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:16.648[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:16.651[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:37:16.959[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 14:37:16.967[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m getArticle - 호출 : 38
+[2m2022-11-23 14:37:17.208[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:37:17.210[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:38:09.369[0;39m [31mERROR[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT expired at 2022-11-23T14:38:03Z. Current time: 2022-11-23T14:38:09Z, a difference of 6369 milliseconds.  Allowed clock skew: 0 milliseconds.
+[2m2022-11-23 14:38:09.369[0;39m [31mERROR[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 불가능 토큰!!!
+[2m2022-11-23 14:38:09.373[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m token : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTY1NTc3MDA0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NzAzNzUxNzcsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VyaWQiOiJzc2FmeSJ9.sQddakpzfPjv2i_YT7ULaBawbktLSEbTLNlrPCz4Ta8, memberDto : MemberDto [userid=ssafy, username=김싸피, userpwd=null, email=ssafy@ssafy.com, joindate=2022-11-17 10:23:18, number=null]
+[2m2022-11-23 14:38:09.374[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m token : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTgxODg5Mzc0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkxODE5NDksInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJpZCI6InNzYWZ5In0.9LKhhtHq4efiGsDzq_QpB5vgwXg_Yzk98mK1GJLRkNQ
+[2m2022-11-23 14:38:09.374[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 정상적으로 액세스토큰 재발급!!!
+[2m2022-11-23 14:38:57.914[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 14:38:58.411[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:38:58.413[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:38:59.313[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:38:59.315[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 14:39:00.768[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:39:01.655[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:39:17.065[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 14:39:18.042[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 14:39:18.044[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 15:20:58.811[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 15:56:56.438[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 15:58:07.651[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 15:58:07.653[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 15:58:20.822[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 15:58:20.825[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 15:58:21.246[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:05:38.484[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:05:38.528[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:11:28.800[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:11:36.978[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTg3NDk2OTc1LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkxODc1NTYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJpZCI6InNzYWZ5In0.bDHtM7uM53WP2iomzj6yhZGqQJa2CabI4e_2l0U96Fg
+[2m2022-11-23 16:11:36.978[0;39m [32mDEBUG[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTg3NDk2OTc1LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NzAzOTcwOTYsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VyaWQiOiJzc2FmeSJ9.9a8VkfWpUck4LOYC2yJiJEdsiIwPsDpbFkH-PKMonQU
+[2m2022-11-23 16:11:36.984[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 16:11:37.048[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:15:43.517[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:19:44.285[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:19:54.581[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/bike
+[2m2022-11-23 16:20:56.699[0;39m [32m INFO[0;39m [35m15320[0;39m [2m---[0;39m [2m[(385)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-23 16:20:56.709[0;39m [33m WARN[0;39m [35m15320[0;39m [2m---[0;39m [2m[(385)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.4.1/java.lang.Thread.run(Thread.java:833)
+[2m2022-11-23 16:20:58.899[0;39m [32m INFO[0;39m [35m13852[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-23 16:20:58.979[0;39m [32m INFO[0;39m [35m13852[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 819 ms
+[2m2022-11-23 16:20:59.565[0;39m [32m INFO[0;39m [35m13852[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-23 16:20:59.581[0;39m [33m WARN[0;39m [35m13852[0;39m [2m---[0;39m [2m[           main][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalStateException: Multiple Dockets with the same group name are not supported. The following duplicate groups were discovered. 게시판
+[2m2022-11-23 16:20:59.598[0;39m [32m INFO[0;39m [35m13852[0;39m [2m---[0;39m [2m[           main][0;39m [36mConditionEvaluationReportLoggingListener[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2m2022-11-23 16:20:59.610[0;39m [31mERROR[0;39m [35m13852[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalStateException: Multiple Dockets with the same group name are not supported. The following duplicate groups were discovered. 게시판
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.ssafy.vue.VueApiApplication.main(VueApiApplication.java:10)
+Caused by: java.lang.IllegalStateException: Multiple Dockets with the same group name are not supported. The following duplicate groups were discovered. 게시판
+	at springfox.documentation.spring.web.plugins.DuplicateGroupsDetector.ensureNoDuplicateGroups(DuplicateGroupsDetector.java:45)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.documentationPlugins(DocumentationPluginsManager.java:97)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:152)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+
+[2m2022-11-23 16:21:54.275[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-23 16:21:54.369[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 810 ms
+[2m2022-11-23 16:21:54.918[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-23 16:22:02.178[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-23 16:22:02.179[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 0 ms
+[2m2022-11-23 16:22:02.199[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:22:09.770[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 16:22:09.793[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 16:22:11.424[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:22:11.475[0;39m [31mERROR[0;39m [35m17044[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index desc' at line 4
+### The error may exist in file [C:\Users\multicampus\Desktop\Spring-Boot-Vue-Project\VueApi\target\classes\mappers\bike.xml]
+### The error may involve com.ssafy.vue.model.mapper.BikeMapper.listBike-Inline
+### The error occurred while setting parameters
+### SQL: select b.description , b.index,t.latitude , t.longitude     from bike b join total_places t    on b.id = t.name   order by index desc;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index desc' at line 4
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index desc' at line 4] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index desc' at line 4
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at jdk.proxy2/jdk.proxy2.$Proxy73.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy106.listBike(Unknown Source)
+	at com.ssafy.vue.model.service.BikeServiceImpl.listBike(BikeServiceImpl.java:23)
+	at com.ssafy.vue.controller.BikeMapController.listBike(BikeMapController.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+[2m2022-11-23 16:23:16.669[0;39m [32m INFO[0;39m [35m17044[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-23 16:23:16.679[0;39m [33m WARN[0;39m [35m17044[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.4.1/java.lang.Thread.run(Thread.java:833)
+[2m2022-11-23 16:23:18.769[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-23 16:23:18.859[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 797 ms
+[2m2022-11-23 16:23:19.405[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-23 16:23:22.518[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-23 16:23:22.518[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 0 ms
+[2m2022-11-23 16:23:22.537[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:23:23.295[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:25:38.868[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:25:38.917[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:25:52.907[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:25:52.944[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:26:42.962[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:26:42.996[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:34:10.629[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:34:10.659[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:34:14.481[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:34:15.104[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:34:53.491[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:34:55.821[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:35:35.466[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:35:58.539[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:35:58.578[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:36:05.271[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:36:10.308[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:36:10.953[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:38:30.018[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:38:30.053[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:39:05.753[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:39:05.782[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:39:26.529[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:39:27.456[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:42:34.276[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:42:34.945[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:45:47.730[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:45:47.755[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:46:41.341[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:46:50.750[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:46:53.516[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:46:54.664[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:47:06.089[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:47:06.809[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:47:49.909[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:47:50.527[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:47:53.462[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:48:16.014[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:48:16.058[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:50:14.687[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:50:15.066[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:50:45.999[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:50:46.037[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:51:09.092[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 16:51:09.118[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 16:51:09.658[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:51:10.841[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:52:27.374[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:52:27.401[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:54:57.268[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:54:57.644[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:55:13.604[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:55:14.233[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:57:19.722[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:57:19.771[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:57:24.996[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:57:30.880[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:57:38.050[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:57:38.085[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:58:15.092[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:58:15.121[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:59:42.947[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:59:42.981[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 16:59:48.713[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 16:59:49.225[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:00:19.065[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:00:19.760[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:03:31.791[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:03:31.829[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:03:50.761[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:03:51.951[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:03:54.303[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:04:18.438[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:04:23.137[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:06:18.859[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:06:22.380[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:06:46.423[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:08:46.306[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:09:02.644[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:09:33.987[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:10:30.623[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:10:31.086[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:10:38.830[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:10:53.793[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:11:58.855[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:12:26.896[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:14:10.342[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:14:10.393[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:14:34.613[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:16:24.289[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:16:24.320[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:16:30.555[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:16:38.504[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:16:38.541[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:16:41.995[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:19:34.671[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:21:23.343[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:21:32.086[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:24:35.993[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:24:39.362[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:25:54.885[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:25:54.920[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:25:59.263[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:26:24.495[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:26:27.395[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:26:32.860[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:28:17.096[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:28:21.177[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:29:34.475[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:29:41.519[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:30:05.379[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:30:08.720[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:31:26.647[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:31:54.042[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:31:58.898[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:32:55.183[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:33:09.768[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:33:21.448[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:33:36.626[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:33:38.712[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:34:39.974[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:34:52.451[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:34:56.328[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:35:05.086[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:35:08.538[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:35:31.568[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:35:48.267[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:36:01.665[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:36:16.387[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:36:19.197[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:36:28.377[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:36:31.100[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:37:27.251[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:37:49.398[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:38:03.876[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:38:07.394[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:40:30.238[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:40:34.089[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:41:01.449[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:41:47.511[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:41:58.993[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:42:22.703[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:42:23.476[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:42:23.478[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:42:24.223[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:42:25.460[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:42:27.276[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:42:28.035[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:42:34.038[0;39m [32mDEBUG[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTkyOTU0MDEzLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkxOTMwMTQsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJpZCI6InNzYWZ5In0.MSuEY-PklHAJXTLReOKE6FJDRb9auSiBraavqWD7p0c
+[2m2022-11-23 17:42:34.039[0;39m [32mDEBUG[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MTkyOTU0MDMyLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NzA0MDI1NTQsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VyaWQiOiJzc2FmeSJ9.0U4lSRwK776Gdv2pZaBeCVLbF30sR_w1BcshQGblB7s
+[2m2022-11-23 17:42:34.058[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.MemberController [0;39m [2m:[0;39m 사용 가능한 토큰!!!
+[2m2022-11-23 17:42:34.087[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:42:38.796[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:42:39.364[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:47:23.861[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:47:28.017[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:48:09.041[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:48:37.387[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:48:50.461[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:48:52.470[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:48:53.079[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:48:55.924[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:48:57.313[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:48:57.316[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:48:58.366[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:48:58.369[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:48:58.892[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:48:59.366[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:49:04.189[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:49:27.966[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:49:28.520[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:49:46.903[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:51:00.442[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:51:45.099[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:51:47.503[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:51:48.405[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:51:52.318[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:51:52.967[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:53:04.863[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:53:06.181[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:53:31.537[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:53:31.539[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:53:32.030[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:54:19.429[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:54:21.158[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:54:21.757[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:54:33.221[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:54:34.192[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:54:34.195[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:54:35.518[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:54:38.704[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:54:38.707[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:54:39.468[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:55:05.526[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:55:05.529[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:55:06.131[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:58:28.887[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:58:33.864[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:58:34.413[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 17:58:40.025[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
+[2m2022-11-23 17:58:40.028[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m totlacount - 호출:   7
+[2m2022-11-23 17:58:40.888[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listTodo - 호출
+[2m2022-11-23 17:58:42.020[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listBike - 호출
+[2m2022-11-23 18:03:00.046[0;39m [32m INFO[0;39m [35m1980[0;39m [2m---[0;39m [2m[(110)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-23 18:03:00.055[0;39m [33m WARN[0;39m [35m1980[0;39m [2m---[0;39m [2m[(110)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.4.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.4.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.4.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.4.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.4.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.4.1/java.lang.Thread.run(Thread.java:833)

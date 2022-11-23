@@ -51,6 +51,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
+    "globals": {"kakao":true},
     "root": true,
     "env": {
       "node": true

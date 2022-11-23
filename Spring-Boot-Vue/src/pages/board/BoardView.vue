@@ -61,7 +61,7 @@ export default {
         this.article = data;
       },
       (error) => {
-        console.log(error);
+        //console.log(error);
       }
     );
   },

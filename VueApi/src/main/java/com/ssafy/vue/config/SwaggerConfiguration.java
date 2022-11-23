@@ -46,6 +46,11 @@ public class SwaggerConfiguration {
 	}
 
 	@Bean
+	public Docket bikeApi() {
+		return getDocket("자전거", Predicates.or(PathSelectors.regex("/bike.*")));
+	}
+	
+	@Bean
 	public Docket searchApi() {
 		return getDocket("게시판", Predicates.or(PathSelectors.regex("/board.*")));
 	}
