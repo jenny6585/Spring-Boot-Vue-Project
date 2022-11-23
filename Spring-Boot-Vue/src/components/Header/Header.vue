@@ -7,49 +7,31 @@
           <b-input-group-text slot="prepend"
             ><i class="fi flaticon-search-2"></i
           ></b-input-group-text>
-          <b-input
-            class="input-transparent"
-            id="search-input"
-            placeholder="Search Dashboard"
-          />
+          <b-input class="input-transparent" id="search-input" placeholder="Search Dashboard" />
         </b-input-group>
       </b-nav-form>
       <!-- 로그인 했을때 -->
       <div v-if="userInfo">
-        <b-nav-item-dropdown
-          right
-          class="avatar-toggle float-left"
-          menu-class="py-0"
-        >
+        <b-nav-item-dropdown right class="avatar-toggle float-left" menu-class="py-0">
           <template slot="button-content">
             <span class="avatar rounded-circle thumb-sm-1 float-left mr-2">
-              <img
-                class="rounded-circle"
-                src="../../assets/people/a7.png"
-                alt="..."
-              />
+              <img class="rounded-circle" src="../../assets/people/a7.png" alt="..." />
             </span>
             <span class="text-white"
-              >{{ userInfo.username }}({{ userInfo.userid }})님
-              환영합니다.</span
+              >{{ userInfo.username }}({{ userInfo.userid }})님 환영합니다.</span
             >
           </template>
           <notifications />
-<<<<<<< HEAD
           <b-nav-item no-caret right class="mr-2">
             <b-dropdown-item float-left>
               <i class="la la-user" />
-              <router-link
-                :to="{ name: 'mypage' }"
-                class="link align-self-center mr-2"
+              <router-link :to="{ name: 'mypage' }" class="link align-self-center mr-2"
                 >내정보보기</router-link
               >
             </b-dropdown-item>
             <b-dropdown-item float-left>
               <i class="fi flaticon-settings-10 px-2 float-left" />
-              <router-link
-                :to="{ name: 'modify' }"
-                class="link align-self-center"
+              <router-link :to="{ name: 'modify' }" class="link align-self-center"
                 >내정보 수정</router-link
               >
             </b-dropdown-item>
@@ -64,39 +46,10 @@
             >
           </div>
         </div>
-=======
-          <b-nav-item class="divider d-md-down-none"></b-nav-item>
-        <b-nav-item no-caret right class="mr-2">
-          <template slot="button-content">
-            
-          </template>
-          <b-dropdown-item float-left>
-            <i class="la la-user" />
-            <router-link :to="{ name: 'mypage' }" class="link align-self-center">내정보보기</router-link>
-          </b-dropdown-item>
-          <b-dropdown-item float-left>
-            <i class="fi flaticon-settings-10 px-2 float-left" />
-            <router-link :to="{ name: 'mypage' }" class="link align-self-center">내정보 수정</router-link>
-          </b-dropdown-item>
-          <b-dropdown-divider />
-        </b-nav-item>
-        <b-nav-item class="d-md-down-none float-left" @click="logout">
-          <i class="fi flaticon-power-1 px-2" />
-        </b-nav-item>
-        </b-nav-item-dropdown>
-        
-
-      </div>
-      <!-- 로그인 안했을때 -->
-      <div v-else>
-        <b-button variant="primary" href="/user/login">로그인 / 회원가입</b-button>
->>>>>>> 969988c1d05da1afe4ab674afb384aec0b4291cf
       </div>
       <!-- 로그인 안했을때 -->
       <b-navbar-nav v-else>
-        <b-button variant="primary" href="/user/login"
-          >로그인 / 회원가입</b-button
-        >
+        <b-button variant="primary" href="/user/login">로그인 / 회원가입</b-button>
       </b-navbar-nav>
     </b-navbar-nav>
   </b-navbar>
