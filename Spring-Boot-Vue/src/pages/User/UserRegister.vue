@@ -2,7 +2,7 @@
   <b-container class="bv-example-row mt-3">
     <h2>회원가입</h2>
     <b-col style="text-align: left">
-      <b-form @submit="onSubmit" @reset="onReset">
+      <b-form @submit="onSubmit">
         <b-form-group
           id="userid-group"
           label="아이디:"
@@ -19,13 +19,17 @@
             class="bg-white"
           ></b-form-input>
         </b-form-group>
-        <b-button class="mb-4" variant="primary" @click="idDouble">아이디 중복검사</b-button>
+        <b-button class="mb-4" variant="primary" @click="idDouble"
+          >아이디 중복검사</b-button
+        >
         <div v-if="temp.idCheck">
-          <h6 class="warn-id" v-if="temp.alertid">사용 불가능한 아이디입니다...</h6>
-          <h6 class="ok-id" v-else-if="!temp.alertid">사용가능한 아이디입니다...</h6>
+          <h6 class="warn-id" v-if="temp.alertid">
+            사용 불가능한 아이디입니다...
+          </h6>
+          <h6 class="ok-id" v-else-if="!temp.alertid">
+            사용가능한 아이디입니다...
+          </h6>
         </div>
-
-        
 
         <b-form-group
           id="username-group"
@@ -126,7 +130,7 @@
   </b-container>
 </template>
 
-            <script>
+<script>
 import { joinMember, findMember } from "@/api/member";
 
 export default {
@@ -135,7 +139,7 @@ export default {
     return {
       temp: {
         userpwdCheck: "",
-        idCheck : false,
+        idCheck: false,
         alertid: false,
       },
       user: {
@@ -152,7 +156,7 @@ export default {
     type: { type: String },
   },
   methods: {
-    idDouble(){
+    idDouble() {
       let userid = this.user.userid;
       console.log(userid);
       findMember(
@@ -162,7 +166,7 @@ export default {
           if (data === "success") {
             msg = "사용 가능";
             this.temp.alertid = false;
-          }else{
+          } else {
             this.temp.alertid = true;
           }
           alert(msg);
@@ -205,15 +209,7 @@ export default {
         this.registUser();
       }
     },
-    onReset(event) {
-      event.preventDefault();
-      this.user.userid = "";
-      this.user.username = "";
-      this.user.userpwd = "";
-      this.user.email = "";
-      this.user.number = 0;
-      this.moveList();
-    },
+
     registUser() {
       let param = {
         userid: this.user.userid,
@@ -230,13 +226,12 @@ export default {
             msg = "회원가입이 완료되었습니다.";
           }
           alert(msg);
-          this.onReset();
-          this.moveList();
         },
         (error) => {
           console.log(error);
         }
       );
+      this.moveList();
     },
     moveList() {
       this.$router.push({ name: "login" });
@@ -246,11 +241,11 @@ export default {
 </script>
 
 <style scoped>
-.warn-id{
-  color:red;
+.warn-id {
+  color: red;
   font-weight: bold;
 }
-.ok-id{
+.ok-id {
   font-weight: bold;
 }
 </style>

@@ -2,7 +2,13 @@
   <b-tr>
     <b-td>{{ notificationno }}</b-td>
     <b-th class="text-left">
-      <router-link :to="{ name: 'Notificationview', params: { notificationno: notificationno } }">{{ subject }}</router-link>
+      <router-link
+        :to="{
+          name: 'notificationsview',
+          params: { notificationno: notificationno },
+        }"
+        >{{ subject }}</router-link
+      >
     </b-th>
     <b-td>{{ hit }}</b-td>
     <b-td>{{ id }}</b-td>

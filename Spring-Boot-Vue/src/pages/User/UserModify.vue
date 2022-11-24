@@ -1,5 +1,5 @@
 <template>
-  <b-container class=" back-modal bv-example-row mt-3">
+  <b-container class="back-modal bv-example-row mt-3">
     <!-- 모달 -->
     <div v-if="temp.pwdCheck">
       <!-- Using value -->
@@ -56,10 +56,11 @@
             id="userid-group"
             label="아이디:"
             label-for="id"
-            description="아이디를 입력하세요."
+            description="아이디는 수정 불가합니다."
           >
             <b-form-input
               id="userid"
+              readonly
               :disabled="isUserid"
               v-model="user.userid"
               type="text"
@@ -136,7 +137,6 @@
         </b-form>
       </b-col>
     </div>
-    
   </b-container>
 </template>
 
@@ -152,7 +152,7 @@ export default {
   data() {
     return {
       temp: {
-        comment:"",
+        comment: "",
         pwdCheck: true,
       },
       user: {
@@ -181,19 +181,19 @@ export default {
   methods: {
     ...mapActions(memberStore, ["userConfirm"]),
 
-    async checkPW(){
-      let made_user ={
+    async checkPW() {
+      let made_user = {
         userid: this.userInfo.userid,
         userpwd: this.temp.comment,
       };
       console.log(made_user);
 
       await this.userConfirm(made_user);
-      this.temp.comment="";
-      if(this.isLogin){
+      this.temp.comment = "";
+      if (this.isLogin) {
         this.temp.pwdCheck = false;
         alert("비밀번호를 확인하였습니다");
-      }else{
+      } else {
         alert("비밀번호를 다시 확인해주세요");
       }
     },
@@ -267,7 +267,7 @@ export default {
 </script>
 
 <style scoped>
-.back-modal{
+.back-modal {
   position: absolute;
   top: 0;
   left: 0;

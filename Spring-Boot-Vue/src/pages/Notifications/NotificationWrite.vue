@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import NotificationInputItem from "@/pages/notification/item/NotificationInputItem";
+import NotificationInputItem from "@/pages/Notifications/item/NotificationInputItem";
 
 export default {
-  name: "NotificationWrite",
+  name: "notificationswrite",
   components: {
-    notificationInputItem,
+    NotificationInputItem,
   },
 };
 </script>

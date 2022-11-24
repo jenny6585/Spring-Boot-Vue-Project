@@ -50,26 +50,31 @@ public class MemberController {
 		Map<String, Object> resultMap = new HashMap<>();
 		HttpStatus status = null;
 		try {
-			
 			SecureMemberDto sec = memberService.getSecure(memberDto.getUserid());
-			String pw = OpenCrypt.getSHA256(memberDto.getUserpwd(), sec.getSalt());
-			memberDto.setUserpwd(pw);
-			MemberDto loginUser = memberService.login(memberDto);
-			
-			if (loginUser != null) {
-				String accessToken = jwtService.createAccessToken("userid", loginUser.getUserid());// key, data
-				String refreshToken = jwtService.createRefreshToken("userid", loginUser.getUserid());// key, data
-				memberService.saveRefreshToken(memberDto.getUserid(), refreshToken);
-				logger.debug("로그인 accessToken 정보 : {}", accessToken);
-				logger.debug("로그인 refreshToken 정보 : {}", refreshToken);
-				resultMap.put("access-token", accessToken);
-				resultMap.put("refresh-token", refreshToken);
-				resultMap.put("message", SUCCESS);
-				status = HttpStatus.ACCEPTED;
-			} else {
+			if(sec==null) {
 				resultMap.put("message", FAIL);
 				status = HttpStatus.ACCEPTED;
+			}else {
+				String pw = OpenCrypt.getSHA256(memberDto.getUserpwd(), sec.getSalt());
+				memberDto.setUserpwd(pw);
+				MemberDto loginUser = memberService.login(memberDto);
+				
+				if (loginUser != null) {
+					String accessToken = jwtService.createAccessToken("userid", loginUser.getUserid());// key, data
+					String refreshToken = jwtService.createRefreshToken("userid", loginUser.getUserid());// key, data
+					memberService.saveRefreshToken(memberDto.getUserid(), refreshToken);
+					logger.debug("로그인 accessToken 정보 : {}", accessToken);
+					logger.debug("로그인 refreshToken 정보 : {}", refreshToken);
+					resultMap.put("access-token", accessToken);
+					resultMap.put("refresh-token", refreshToken);
+					resultMap.put("message", SUCCESS);
+					status = HttpStatus.ACCEPTED;
+				} else {
+					resultMap.put("message", FAIL);
+					status = HttpStatus.ACCEPTED;
+				}
 			}
+			
 		} catch (Exception e) {
 			logger.error("로그인 실패 : {}", e);
 			resultMap.put("message", e.getMessage());
@@ -167,24 +172,18 @@ public class MemberController {
 	public ResponseEntity<String> joinMember(@RequestBody @ApiParam(value = "게시글 정보.", required = true) MemberDto memberDto) throws Exception {
 		logger.info("joinMember - 호출 {}",memberDto);
 		Map<String, Object> resultMap = new HashMap<>();
-		
-		if(memberService.findMember(memberDto.getUserid())!=null) {
-			//이미 존재하는 아이디
-			resultMap.put("message", "이미 존재하는 아이디입니다.");
+		System.out.println(memberDto.getUserid());
+		try {
+			byte[] key = OpenCrypt.generateKey("AES", 128);
+			SecureMemberDto secureMemberDto = new SecureMemberDto(memberDto.getUserid(), UUID.randomUUID().toString(), OpenCrypt.byteArrayToHex(key));
+			System.out.println(secureMemberDto);
+			memberService.secureMember(secureMemberDto);
+			memberDto.setUserpwd(OpenCrypt.getSHA256(memberDto.getUserpwd(), secureMemberDto.getSalt()));
+			memberService.joinMember(memberDto);
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
 			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
-		}else {
-			try {
-				byte[] key = OpenCrypt.generateKey("AES", 128);
-				SecureMemberDto secureMemberDto = new SecureMemberDto(memberDto.getUserid(), UUID.randomUUID().toString(), OpenCrypt.byteArrayToHex(key));
-				System.out.println(secureMemberDto);
-				memberService.secureMember(secureMemberDto);
-				memberDto.setUserpwd(OpenCrypt.getSHA256(memberDto.getUserpwd(), secureMemberDto.getSalt()));
-				memberService.joinMember(memberDto);
-				return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
-			} catch (Exception e) {
-				e.printStackTrace();
-				return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
-			}
 		}
 	}
 	
@@ -193,6 +192,7 @@ public class MemberController {
 	public ResponseEntity<String> findMember(@RequestBody @ApiParam(value = "아이디 정보.", required = true) String userid) throws Exception {
 		logger.info("findMember - 호출 {}",userid);
 		Map<String, Object> resultMap = new HashMap<>();
+		System.out.println("id : " + userid);
 		if(memberService.findMember(userid)!=null) {
 			//이미 존재하는 아이디
 			resultMap.put("message", "이미 존재하는 아이디입니다.");

@@ -15,7 +15,7 @@
 import { deleteNotification } from "@/api/notification";
 
 export default {
-  name: "NotificationDelete",
+  name: "notificationsdelete",
   created() {
     let param = this.$route.params.notificationno;
     deleteNotification(
@@ -27,7 +27,7 @@ export default {
         }
         alert(msg);
         // 현재 route를 /list로 변경.
-        this.$router.push({ name: "notificationlist" });
+        this.$router.push({ name: "notificationslist" });
       },
       (error) => {
         console.log(error);

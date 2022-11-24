@@ -16,7 +16,7 @@
 		<item value="org.eclipse.jgit:6.3.0.202209071007-r"/>
 		<item value="org.eclipse.jst.common.fproj.enablement.jdt:3.27.0.v202208260526"/>
 		<item value="org.eclipse.jst.enterprise_ui.feature:3.27.0.v202206160204"/>
-		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:17.0.4.v20220903-1038"/>
+		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:17.0.4.v20221004-1257"/>
 		<item value="org.eclipse.m2e.feature:2.0.5.20220912-1211"/>
 		<item value="org.eclipse.m2e.logback.feature:2.0.0.20220717-0848"/>
 		<item value="org.eclipse.m2e.wtp.feature:1.5.2.20220906-1452"/>
@@ -34,6 +34,7 @@
 		<item value="org.eclipse.wst.web_ui.feature:3.27.0.v202208280234"/>
 		<item value="org.eclipse.wst.xml_ui.feature:3.27.0.v202208280234"/>
 		<item value="org.jboss.tools.m2e.wro4j.feature:1.2.0.202209071019"/>
+		<item value="org.sonatype.m2e.egit.feature:0.17.0.202209271423"/>
 	</list>
 	<section name="ChooseWorkspaceDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="191"/>
@@ -45,11 +46,12 @@
 	</section>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\multicampus\Desktop\Spring-Boot-Vue-Project\VueApi"/>
 			<item value="C:\Users\ahnrh\OneDrive\바탕 화면\Spring-Boot-Vue-Project\VueApi"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

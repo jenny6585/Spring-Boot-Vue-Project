@@ -5,15 +5,19 @@
         <b-col>
           <h1 class="m-t-1 mb-5 fw-semi-bold">나의 정보</h1>
           <h5 class="m-t-1">ID:</h5>
-          <pre class="mb-4"><code>{{ userInfo.userid }}</code></pre>
+          <pre class="mb-4"><code class="h5">{{ userInfo.userid }}</code></pre>
           <h5 class="m-t-1">Name:</h5>
-          <pre class="mb-4"><code>{{ userInfo.username }}</code></pre>
+          <pre
+            class="mb-4"
+          ><code class="h5">{{ userInfo.username }}</code></pre>
           <h5 class="m-t-1">E-mail:</h5>
-          <pre class="mb-4"><code>{{ userInfo.email }}</code></pre>
+          <pre class="mb-4"><code class="h5">{{ userInfo.email }}</code></pre>
           <h5 class="m-t-1">Join Date:</h5>
-          <pre class="mb-4"><code>{{ userInfo.joindate }}</code></pre>
+          <pre
+            class="mb-4"
+          ><code class="h5">{{ userInfo.joindate }}</code></pre>
           <h5 class="m-t-1">Tel:</h5>
-          <pre class="mb-4"><code>{{ userInfo.number }}</code></pre>
+          <pre class="mb-4"><code class="h5">{{ userInfo.number }}</code></pre>
 
           <p>
             Different types of notifications for lots of use cases. Custom
@@ -44,6 +48,11 @@ export default {
   },
   computed: {
     ...mapState(memberStore, ["userInfo"]),
+  },
+  methods: {
+    modify() {
+      this.$router.push({ name: "modify" });
+    },
   },
 };
 </script>

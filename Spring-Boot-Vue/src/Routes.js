@@ -3,10 +3,6 @@ import VueRouter from 'vue-router';
 
 import Layout from '@/components/Layout/Layout';
 import Bookmark from '@/pages/Bookmark/Bookmark';
-
-import Notifications from '@/pages/Notifications/Notifications';
-import Icons from '@/pages/Icons/Icons';
-import Charts from '@/pages/Charts/Charts';
 import BikeMap from '@/pages/Visits/BikeMap';
 import User from '@/pages/User/User';
 import ErrorPage from '@/pages/Error/Error';
@@ -15,6 +11,7 @@ import UserRegister from '@/pages/User/UserRegister';
 import UserLogin from '@/pages/User/UserLogin';
 import UserMyPage from '@/pages/User/UserMyPage';
 import UserModify from '@/pages/User/UserModify';
+import Invitations from '@/pages/Invitations/Invitations';
 
 import store from "@/store";
 
@@ -133,49 +130,46 @@ const routes = [
         path: 'notifications',
         name: 'Notifications',
         component: () => import("@/views/AppNotification"),
-        redirect: "board/list",
+        redirect: "Notifications/notificationslist",
         children: [
+          
           {
             path: "notificationslist",
             name: "notificationslist",
-            component: () => import("@/pages/board/BoardList"),
+            component: () => import("@/pages/Notifications/NotificationList"),
           },
           {
             path: "notificationswrite",
             name: "notificationswrite",
             beforeEnter: onlyAuthUser,
-            component: () => import("@/pages/board/BoardWrite"),
+            component: () => import("@/pages/Notifications/NotificationWrite"),
           },
           {
             path: "notificationsview/:articleno",
             name: "notificationsview",
             beforeEnter: onlyAuthUser,
-            component: () => import("@/pages/board/BoardView"),
+            component: () => import("@/pages/Notifications/NotificationView"),
           },
           {
             path: "notificationsmodify",
             name: "notificationsmodify",
             beforeEnter: onlyAuthUser,
-            component: () => import("@/pages/board/BoardModify"),
+            component: () => import("@/pages/Notifications/NotificationModify"),
           },
           {
             path: "notificationsdelete/:articleno",
             name: "notificationsdelete",
             beforeEnter: onlyAuthUser,
-            component: () => import("@/pages/board/BoardDelete"),
+            component: () => import("@/pages/Notifications/NotificationDelete"),
           },
         ],
       },
       {
-        path: 'components/icons',
-        name: 'Icons',
-        component: Icons,
+        path: 'invitations',
+        name: 'invitations',
+        component: Invitations,
       },
-      {
-        path: 'components/charts',
-        name: 'Charts',
-        component: Charts,
-      },
+
     ],
   },
   {

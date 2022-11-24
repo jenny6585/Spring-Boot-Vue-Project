@@ -6,7 +6,7 @@
           <b-form-input
             id="id"
             :disabled="isUserid"
-            v-model="article.userid"
+            v-model="notification.userid"
             type="text"
             required
             readonly
@@ -22,7 +22,7 @@
         >
           <b-form-input
             id="subject"
-            v-model="article.subject"
+            v-model="notification.subject"
             type="text"
             required
             placeholder="제목 입력..."
@@ -32,17 +32,23 @@
         <b-form-group id="content-group" label="내용:" label-for="content">
           <b-form-textarea
             id="content"
-            v-model="article.content"
+            v-model="notification.content"
             placeholder="내용 입력..."
             rows="10"
             max-rows="15"
           ></b-form-textarea>
         </b-form-group>
 
-        <b-button type="submit" variant="primary" class="m-1" v-if="this.type === 'register'"
+        <b-button
+          type="submit"
+          variant="primary"
+          class="m-1"
+          v-if="this.type === 'register'"
           >글작성</b-button
         >
-        <b-button type="submit" variant="primary" class="m-1" v-else>글수정</b-button>
+        <b-button type="submit" variant="primary" class="m-1" v-else
+          >글수정</b-button
+        >
         <b-button type="reset" variant="danger" class="m-1">초기화</b-button>
       </b-form>
     </b-col>
@@ -50,7 +56,11 @@
 </template>
 
 <script>
-import { writeNotification, modifyNotification, getNotification } from "@/api/notification";
+import {
+  writeNotification,
+  modifyNotification,
+  getNotification,
+} from "@/api/notification";
 import { mapState } from "vuex";
 const memberStore = "memberStore";
 export default {
@@ -75,10 +85,6 @@ export default {
       getNotification(
         param,
         ({ data }) => {
-          // this.article.articleno = data.article.articleno;
-          // this.article.userid = data.article.userid;
-          // this.article.subject = data.article.subject;
-          // this.article.content = data.article.content;
           this.notification = data;
         },
         (error) => {
@@ -100,7 +106,10 @@ export default {
         !this.notification.content &&
         ((msg = "내용 입력해주세요"), (err = false), this.$refs.content);
       if (!err) alert(msg);
-      else this.type === "register" ? this.registNotification() : this.modifyNotification();
+      else
+        this.type === "register"
+          ? this.registNotification()
+          : this.modifyNotification();
     },
     onReset(event) {
       event.preventDefault();
@@ -155,7 +164,7 @@ export default {
       );
     },
     moveList() {
-      this.$router.push({ name: "notificationlist" });
+      this.$router.push({ name: "notificationslist" });
     },
   },
   computed: {

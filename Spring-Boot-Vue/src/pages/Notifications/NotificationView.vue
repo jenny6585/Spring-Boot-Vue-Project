@@ -9,18 +9,24 @@
       <b-col class="text-left">
         <b-button variant="outline-primary" @click="moveList">목록</b-button>
       </b-col>
-      <b-col class="text-right" v-if="userInfo.userid === article.userid">
-        <b-button variant="outline-info" size="sm" @click="moveModifyArticle" class="mr-2"
+      <b-col class="text-right" v-if="userInfo.userid === notification.userid">
+        <b-button
+          variant="outline-info"
+          size="sm"
+          @click="moveModifyNotification"
+          class="mr-2"
           >글수정</b-button
         >
-        <b-button variant="outline-danger" size="sm" @click="deleteArticle">글삭제</b-button>
+        <b-button variant="outline-danger" size="sm" @click="deleteNotification"
+          >글삭제</b-button
+        >
       </b-col>
     </b-row>
     <b-row class="mb-1">
       <b-col>
         <b-card
-          :header-html="`<h3>${article.articleno}.
-          ${article.subject} [${article.hit}]</h3><div><h6>${article.userid}</div><div>${article.regtime}</h6></div>`"
+          :header-html="`<h3>${notification.notificationno}.
+          ${notification.subject} [${notification.hit}]</h3><div><h6>${notification.userid}</div><div>${notification.regtime}</h6></div>`"
           class="mb-2"
           border-variant="dark"
           no-body
@@ -36,53 +42,54 @@
 
 <script>
 // import moment from "moment";
-import { getArticle } from "@/api/notification";
+import { getNotification } from "@/api/notification";
 import { mapState } from "vuex";
 const memberStore = "memberStore";
 export default {
-  name: "notificationDetail",
+  name: "notificationsview",
   data() {
     return {
-      article: {},
+      notification: {},
     };
   },
   computed: {
     ...mapState(memberStore, ["userInfo"]),
     message() {
-      if (this.article.content) return this.article.content.split("\n").join("<br>");
+      if (this.notification.content)
+        return this.notification.content.split("\n").join("<br>");
       return "";
     },
   },
   created() {
-    let param = this.$route.params.articleno;
+    let param = this.$route.params.notificationno;
     getNotification(
       param,
       ({ data }) => {
-        this.article = data;
+        this.notification = data;
       },
       (error) => {
         //console.log(error);
       }
     );
   },
-  methods: { 
-    moveModifyArticle() {
+  methods: {
+    moveModifyNotification() {
       this.$router.replace({
-        name: "notificationmodify",
-        params: { articleno: this.article.articleno },
+        name: "notificationsmodify",
+        params: { notificationno: this.notification.notificationno },
       });
-      //   this.$router.push({ path: `/notification/modify/${this.article.articleno}` });
+      //   this.$router.push({ path: `/notification/modify/${this.notification.notificationno}` });
     },
-    deleteArticle() {
+    deleteNotification() {
       if (confirm("정말로 삭제?")) {
         this.$router.replace({
-          name: "notificationdelete",
-          params: { articleno: this.article.articleno },
+          name: "notificationsdelete",
+          params: { notificationno: this.notification.notificationno },
         });
       }
     },
     moveList() {
-      this.$router.push({ name: "notificationlist" });
+      this.$router.push({ name: "notificationslist" });
     },
   },
   // filters: {

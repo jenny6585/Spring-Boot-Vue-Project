@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ssafy.vue.model.mapper.NotificationMapper">
+
+	<insert id="writeNotification" parameterType="notificationDto">
+		insert into notification (userid, subject, content, hit, regtime)
+		values (#{userid}, #{subject}, #{content}, 0, now())
+	</insert>
+	
+	<select id="listNotification" parameterType="map" resultType="notificationDto">
+		select notificationno, userid, subject, content, hit,
+				case when date_format(regtime, '%Y%m%d') = date_format(now(), '%Y%m%d')
+				then date_format(regtime, '%H:%i:%s')
+				else date_format(regtime, '%y.%m.%d')
+				end regtime
+		from notification
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				where subject like concat('%', #{word}, '%')
+			</if>
+			<if test="key != 'subject'">
+				where ${key} = #{word}
+			</if>
+		</if>
+		order by notificationno desc
+		limit #{start}, #{spp}
+	</select>
+	
+	<select id="getTotalCount" parameterType="map" resultType="int">
+		select count(notificationno)
+		from notification
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				where subject like concat('%', #{word}, '%')
+			</if>
+			<if test="key != 'subject'">
+				where ${key} = #{word}
+			</if>
+		</if>
+	</select>
+	
+	<select id="getNotification" parameterType="int" resultType="notificationDto">
+		select notificationno, userid, subject, content, hit, regtime
+		from notification
+		where notificationno = #{notificationno}
+	</select>
+	
+	<update id="updateHit" parameterType="int">
+		update notification
+		set hit = hit + 1
+		where notificationno = #{notificationno}
+	</update>
+	
+	<update id="modifyNotification" parameterType="notificationDto">
+		update notification
+		set subject = #{subject}, content = #{content}
+		where notificationno = #{notificationno}
+	</update>
+	
+	<delete id="deleteMemo" parameterType="int">
+		delete from memo
+		where notificationno = #{notificationno}
+	</delete>
+	
+	<delete id="deleteNotification" parameterType="int">
+		delete from notification
+		where notificationno = #{notificationno}
+	</delete>
+
+</mapper>
+
