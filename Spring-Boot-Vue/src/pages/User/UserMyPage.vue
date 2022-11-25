@@ -27,6 +27,12 @@
             <b-button variant="info" id="show-info-message" @click="modify"
               >정보 수정</b-button
             >
+            <b-button
+              variant="warning"
+              id="show-info-message"
+              @click="deleteMember"
+              >탈퇴하기</b-button
+            >
           </p>
         </b-col>
       </b-row>
@@ -52,6 +58,28 @@ export default {
   methods: {
     modify() {
       this.$router.push({ name: "modify" });
+    },
+    deleteMember() {
+      this.temp.pwdCheck = true;
+
+      deleteMember(
+        userid,
+        ({ data }) => {
+          let msg = "아이디가 이미 존재합니다.";
+          if (data === "success") {
+            msg = "사용 가능";
+            this.temp.alertid = false;
+          } else {
+            this.temp.alertid = true;
+          }
+          alert(msg);
+          this.temp.idCheck = true;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+      this.$router.push({ name: "login" });
     },
   },
 };

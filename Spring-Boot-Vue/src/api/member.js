@@ -31,5 +31,7 @@ async function modifyMember(user, success, fail) {
 async function findMember(userid, success, fail) {
   await api.post(`/user/find`, JSON.stringify(userid)).then(success).catch(fail);
 }
-
-export { login, findById, tokenRegeneration, logout, joinMember, modifyMember, findMember };
+function deleteMember(userid, success, fail) {
+  api.delete(`/user/${userid}`).then(success).catch(fail);
+}
+export { login, findById, tokenRegeneration, logout, joinMember, modifyMember, findMember,deleteMember };

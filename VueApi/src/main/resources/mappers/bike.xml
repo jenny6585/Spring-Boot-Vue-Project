@@ -5,7 +5,7 @@
 <mapper namespace="com.ssafy.vue.model.mapper.BikeMapper">
 
 	<select id="listBike" parameterType="map" resultType="bikeDto">
-		select b.description , b.index,t.latitude , t.longitude  
+		select  b.gugunRaw, b.description , b.index,t.latitude , t.longitude  
 		from bike b join total_places t 
 		on b.id = t.name
 		order by b.index desc;

@@ -62,7 +62,8 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public boolean joinMember(MemberDto memberDto) throws Exception {
-		if(memberDto.getUserid() == null || memberDto.getUsername() == null || memberDto.getUserpwd() == null || memberDto.getEmail() == null || memberDto.getNumber() == null) {
+		if (memberDto.getUserid() == null || memberDto.getUsername() == null || memberDto.getUserpwd() == null
+				|| memberDto.getEmail() == null || memberDto.getNumber() == null) {
 			throw new Exception();
 		}
 		return sqlSession.getMapper(MemberMapper.class).joinMember(memberDto) == 1;
@@ -81,6 +82,11 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public MemberDto findMember(String userid) throws Exception {
 		return sqlSession.getMapper(MemberMapper.class).findMember(userid);
+	}
+
+	@Override
+	public boolean deleteMember(int userid) throws Exception {
+		return sqlSession.getMapper(MemberMapper.class).deleteMember(userid) == 1;
 	}
 
 }

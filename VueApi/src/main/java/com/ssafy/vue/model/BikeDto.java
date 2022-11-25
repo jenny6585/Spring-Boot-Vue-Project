@@ -18,24 +18,40 @@ public class BikeDto {
 	
 	@ApiModelProperty(value = "경도")
 	private double longitude;
+	
+	@ApiModelProperty(value = "대여소 구")
+	private String gugunRaw;
 
 	public BikeDto() {
 		super();
 	}
 
-	public BikeDto(String description, String id, int index, double latitude, double longitude) {
+	public BikeDto(String description, String id, int index, double latitude, double longitude, String gugunRaw) {
 		super();
 		this.description = description;
 		this.id = id;
 		this.index = index;
 		this.latitude = latitude;
 		this.longitude = longitude;
+		this.gugunRaw = gugunRaw;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "BikeDto [description=" + description + ", id=" + id + ", index=" + index + ", latitude=" + latitude
-				+ ", longitude=" + longitude + "]";
+				+ ", longitude=" + longitude + ", gugunRaw=" + gugunRaw + "]";
+	}
+
+	
+
+	public String getGugunRaw() {
+		return gugunRaw;
+	}
+
+	public void setGugunRaw(String gugunRaw) {
+		this.gugunRaw = gugunRaw;
 	}
 
 	public String getDescription() {

@@ -16,5 +16,5 @@ public interface MemberService {
 
 	public SecureMemberDto getSecure(String userid) throws Exception;
 	public void secureMember(SecureMemberDto secureMemberDto) throws Exception;
-	
+	public boolean deleteMember(int userid) throws Exception;
 }

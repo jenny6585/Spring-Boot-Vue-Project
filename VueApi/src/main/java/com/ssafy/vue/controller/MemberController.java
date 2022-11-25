@@ -3,7 +3,6 @@ package com.ssafy.vue.controller;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import com.ssafy.util.OpenCrypt;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ssafy.util.OpenCrypt;
 import com.ssafy.vue.model.MemberDto;
 import com.ssafy.vue.model.SecureMemberDto;
 import com.ssafy.vue.model.service.JwtServiceImpl;
@@ -205,6 +206,16 @@ public class MemberController {
 		
 		
 	}
+	
+	@ApiOperation(value = "회원 삭제", notes = "userid. 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
+    @DeleteMapping("/{userid}")
+    public ResponseEntity<String> deleteMember(@PathVariable("articleno") @ApiParam(value = "userid의 글번호.", required = true) int userid) throws Exception {
+        logger.info("deleteArticle - 호출");
+        if (memberService.deleteMember(userid)) {
+            return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+        }
+        return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+    }
 		
 
 }

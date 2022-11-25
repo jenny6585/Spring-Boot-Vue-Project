@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ssafy.vue.model.mapper.ParkMapper">
+
+	<select id="listPark" resultType="parkDto">
+		select  p.name,p.region,t.latitude , t.longitude  
+		from park p join total_places t 
+		on p.name = t.name;
+	</select>
+	
+	
+</mapper>
+

@@ -21,5 +21,5 @@ public interface MemberMapper {
 	public SecureMemberDto getSecure(String id) throws SQLException;
 	public void secureMember(SecureMemberDto secureMemberDto) throws SQLException;
 	public MemberDto findMember(String userid) throws SQLException;
-	
+	public int deleteMember(int userid) throws SQLException;
 }
